@@ -18,3 +18,7 @@ func TestRegexp(t *testing.T) {
 		require.True(t, res, "line %d: %q", num, line)
 	}
 }
+
+func TestParseNicknames(t *testing.T) {
+
+}
