@@ -153,6 +153,7 @@ func TestParseLogLine(t *testing.T) {
 			lvl.Players = make(map[int][]Player)
 			err := li.processLogLine(&lvl, test.data)
 			require.NoError(t, err)
+			tt.want.LevelEnd = lvl.LevelEnd
 			require.Equal(t, tt.want, &lvl)
 		})
 	}
@@ -170,8 +171,9 @@ func TestParseGameLog(t *testing.T) {
 		level, err := gameLog.ScanNextLevel()
 		r.NoError(err)
 
+		r.False(level.LevelEnd.IsZero())
 		r.Equal(
-			&GameLogLevel{},
+			&GameLogLevel{LevelEnd: level.LevelEnd},
 			level,
 		)
 	})
@@ -187,8 +189,9 @@ func TestParseGameLog(t *testing.T) {
 		level, err := gameLog.ScanNextLevel()
 		r.NoError(err)
 
+		r.False(level.LevelEnd.IsZero())
 		r.Equal(
-			&GameLogLevel{},
+			&GameLogLevel{LevelEnd: level.LevelEnd},
 			level,
 		)
 	})

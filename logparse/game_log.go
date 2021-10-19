@@ -6,6 +6,7 @@ import (
 	"io"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type GameLogIter struct {
@@ -34,6 +35,8 @@ type GameLogLevel struct {
 	YourTeam int
 	// Players is map[team_id]Player
 	Players map[int][]Player
+
+	LevelEnd time.Time
 }
 
 func (g *GameLogLevel) GetEnemies() map[string]Player {
@@ -74,6 +77,11 @@ func (it *GameLogIter) ScanNextLevel() (*GameLogLevel, error) {
 			it.levelStarting = true
 		} else if startingMessage {
 			// если начало было найдено, то старт нового уровня означает окончанее предыдущего
+			finishedAt, err := time.Parse(timeFormat, line[:strings.Index(line, " ")])
+			if err != nil {
+				return nil, fmt.Errorf("parse stop time: %q: %w", line, err)
+			}
+			lvl.LevelEnd = finishedAt
 			return &lvl, nil
 		}
 
