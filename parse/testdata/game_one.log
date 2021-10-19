@@ -228,10 +228,10 @@
 12:51:09.247  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 417 in slot 3 not found
 12:51:09.247  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 445 in slot 4 not found
 12:51:09.247         | Remove autogen defs
-12:51:09.248         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 1 team 1 group 4778580
-12:51:09.248         | client: ADD_PLAYER 1 (Gob [], 3767922) status 6 team 2 group 4778574
-12:51:09.248         | client: ADD_PLAYER 2 (Dimon856 [xIDx], 284392) status 6 team 1 group 4778580
-12:51:09.248         | client: ADD_PLAYER 3 (Walle00one [], 3748346) status 6 team 2 group 4778574
+12:51:09.248         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 4 team 1 group 4778580
+12:51:09.248         | client: ADD_PLAYER 1 (Gob [], 3767922) status 4 team 2 group 4778574
+12:51:09.248         | client: ADD_PLAYER 2 (Dimon856 [xIDx], 284392) status 4 team 1 group 4778580
+12:51:09.248         | client: ADD_PLAYER 3 (Walle00one [], 3748346) status 4 team 2 group 4778574
 12:51:09.248         | client: server assigned id 0
 12:51:09.248         | client: got level load message 's1338_pandora_anomaly'
 12:51:09.252         | ReplayManager: stopping activity due to map change

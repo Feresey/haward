@@ -2,6 +2,7 @@ package parse
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"io"
 	"strconv"
@@ -62,31 +63,37 @@ func (it *GameLogIter) ScanNextLevel() (*GameLogLevel, error) {
 	var lvl GameLogLevel
 
 	for {
-		line, err := it.rd.ReadString('\n')
+		lineBytes, _, err := it.rd.ReadLine()
+		line := string(lineBytes)
 		if err != nil {
+			if errors.Is(err, io.EOF) {
+				return &lvl, err
+			}
 			return nil, err
 		}
 
 		startingMessage := strings.Contains(line, startingLevelContains)
 
-		if !it.levelStarting {
-			// поиск старта уровня, если ещё не было найдено начало
-			if startingMessage {
-				continue
+		// если нет сообщения о старте уровня
+		if !startingMessage {
+			if err := it.processLogLine(&lvl, line); err != nil {
+				return nil, err
 			}
-			it.levelStarting = true
-		} else if startingMessage {
-			// если начало было найдено, то старт нового уровня означает окончанее предыдущего
+			continue
+		}
+
+		// если логи до этой строчки принадлежали другому уровню
+		if it.levelStarting {
+			// то уровень завершился и сейчас старт нового
 			finishedAt, err := time.Parse(timeFormat, line[:strings.Index(line, " ")])
 			if err != nil {
 				return nil, fmt.Errorf("parse stop time: %q: %w", line, err)
 			}
 			lvl.LevelEnd = finishedAt
 			return &lvl, nil
-		}
-
-		if err := it.processLogLine(&lvl, line); err != nil {
-			return nil, err
+		} else { // если логи выше не принадлежали уровню
+			// то теперь началось описание уровня
+			it.levelStarting = true
 		}
 	}
 }
@@ -110,15 +117,20 @@ func (it *GameLogIter) processLogLine(lvl *GameLogLevel, line string) error {
 	addPlayer := split[1]
 
 	playerStart := strings.Index(addPlayer, "(")
-	playerEnd := strings.Index(addPlayer, ")")
+	playerEnd := strings.LastIndex(addPlayer, ")")
 
 	if playerStart == -1 || playerEnd == -1 {
 		return fmt.Errorf("start: %d, end: %d", playerStart, playerEnd)
 	}
 
-	player, err := parsePlayer(addPlayer[playerStart:playerEnd])
+	player, err := parsePlayer(addPlayer[playerStart : playerEnd+1])
 	if err != nil {
 		return err
+	}
+
+	// бот
+	if player.ID == 0 {
+		return nil
 	}
 
 	status, team, group, err := it.parseAddPlayerFields(strings.Fields(addPlayer[playerEnd+1:]))
@@ -136,13 +148,16 @@ func (it *GameLogIter) processLogLine(lvl *GameLogLevel, line string) error {
 		return nil
 	}
 
+	if lvl.Players == nil {
+		lvl.Players = make(map[int][]Player)
+	}
 	lvl.Players[team] = append(lvl.Players[team], *player)
 	return nil
 }
 
 // (BNV [CSA], 1308282)
 func parsePlayer(player string) (*Player, error) {
-	fields := strings.Fields(strings.Trim(player, "()"))
+	fields := strings.Fields(strings.TrimSuffix(strings.TrimPrefix(player, "("), ")"))
 
 	// BNV [CSA], 1308282
 	const (
@@ -152,19 +167,32 @@ func parsePlayer(player string) (*Player, error) {
 		fieldsLength
 	)
 
+	var nameRaw, clanRaw, idRaw string
+
 	if len(fields) != fieldsLength {
-		return nil, fmt.Errorf("could notn parse player: %q", player)
+		// чел без клана
+		if len(fields) != fieldsLength-1 {
+			return nil, fmt.Errorf("could not parse player: %q", player)
+		}
+
+		nameRaw = strings.TrimRight(fields[fieldName], ",")
+		idRaw = fields[fieldClanTag]
+	} else {
+		nameRaw = fields[fieldName]
+		clanRaw = fields[fieldClanTag]
+		idRaw = fields[fieldID]
 	}
 
-	var p Player
-	p.Name = fields[fieldName]
-	p.ClanTag = strings.TrimRight(strings.TrimLeft(fields[fieldClanTag], "["), "],")
-	id, err := strconv.ParseUint(fields[fieldID], 10, 64)
+	id, err := strconv.ParseUint(idRaw, 10, 64)
 	if err != nil {
-		return nil, fmt.Errorf("parse player id: %q: %w", fields[fieldID], err)
+		return nil, fmt.Errorf("parse player id: %q: %w", idRaw, err)
 	}
-	p.ID = id
-	return &p, nil
+
+	return &Player{
+		Name:    nameRaw,
+		ID:      id,
+		ClanTag: strings.TrimRight(strings.TrimLeft(clanRaw, "["), "],"),
+	}, nil
 }
 
 func (it *GameLogIter) parseAddPlayerFields(fields []string) (status, team, group int, err error) {

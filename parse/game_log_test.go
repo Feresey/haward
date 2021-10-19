@@ -1,6 +1,8 @@
 package parse
 
 import (
+	"errors"
+	"io"
 	"os"
 	"testing"
 
@@ -58,6 +60,14 @@ func TestParsePlayer(t *testing.T) {
 				Name:    "HemitM",
 				ClanTag: "",
 				ID:      2020202,
+			},
+		},
+		{
+			data: "(AlKorn, 0)",
+			want: &Player{
+				Name:    "AlKorn",
+				ClanTag: "",
+				ID:      0,
 			},
 		},
 	}
@@ -169,11 +179,11 @@ func TestParseGameLog(t *testing.T) {
 		gameLog := NewGameLogIter("ZiroTwo", file)
 
 		level, err := gameLog.ScanNextLevel()
-		r.NoError(err)
+		r.EqualError(err, io.EOF.Error())
 
-		r.False(level.LevelEnd.IsZero())
+		r.True(level.LevelEnd.IsZero())
 		r.Equal(
-			&GameLogLevel{LevelEnd: level.LevelEnd},
+			&GameLogLevel{},
 			level,
 		)
 	})
@@ -188,11 +198,93 @@ func TestParseGameLog(t *testing.T) {
 
 		level, err := gameLog.ScanNextLevel()
 		r.NoError(err)
-
 		r.False(level.LevelEnd.IsZero())
 		r.Equal(
 			&GameLogLevel{LevelEnd: level.LevelEnd},
 			level,
 		)
+
+		level, err = gameLog.ScanNextLevel()
+		r.NoError(err)
+		r.False(level.LevelEnd.IsZero())
+		r.Equal(
+			&GameLogLevel{
+				LevelEnd: level.LevelEnd,
+				YourTeam: 1,
+				Players: map[int][]Player{
+					1: {
+						{
+							Name:    "ZiroTwo",
+							ID:      2516405,
+							ClanTag: "xIDx",
+							InGroup: true,
+						},
+						{
+							Name:    "Dimon856",
+							ID:      284392,
+							ClanTag: "xIDx",
+							InGroup: true,
+						},
+					},
+					2: {
+						{
+							Name:    "Gob",
+							ID:      3767922,
+							ClanTag: "",
+							InGroup: true,
+						},
+						{
+							Name:    "Walle00one",
+							ID:      3748346,
+							ClanTag: "",
+							InGroup: true,
+						},
+					},
+				},
+			},
+			level,
+		)
+
+		level, err = gameLog.ScanNextLevel()
+		r.EqualError(err, io.EOF.Error())
+		r.True(level.LevelEnd.IsZero())
+		r.Equal(
+			&GameLogLevel{LevelEnd: level.LevelEnd},
+			level,
+		)
+	})
+
+	t.Run("all", func(t *testing.T) {
+		r := require.New(t)
+		file, err := os.Open("testdata/game_all.log")
+		r.NoError(err)
+		defer file.Close()
+
+		gameLog := NewGameLogIter("ZiroTwo", file)
+
+		counts := []int{
+			0, 0, 4, 0, 4,
+			2, 4, 2, 4, 0,
+			4, 0, 4, 0, 4,
+			0, 4, 1, 4, 0,
+			4, 0, 4, 0, 4,
+			0, 3, 0, 4, 0,
+			8, 3, 8, 0, 8,
+			0, 7, 0, 6, 0,
+			6, 0, 6, 0, 8,
+			0, 4, 0, 8, 3,
+			8,
+		}
+
+		for count := 0; ; count++ {
+			level, err := gameLog.ScanNextLevel()
+			if errors.Is(err, io.EOF) {
+				break
+			}
+			r.NoError(err)
+
+			r.False(level.LevelEnd.IsZero())
+			r.Len(level.GetEnemies(), counts[count])
+		}
 	})
 }
