@@ -1,6 +1,7 @@
 package parse
 
 import (
+	"bufio"
 	"os"
 	"testing"
 	"time"
@@ -29,7 +30,7 @@ func TestParseCombatLog(t *testing.T) {
 		defer file.Close()
 		// 21:53:19.835
 		awards, punishments, err := ParseCombatLog(
-			file,
+			bufio.NewScanner(file),
 			"ZiroTwo",
 			time.Date(2021, time.October, 19, 22, 0, 0, 0, time.Local),
 			func(s string) (int, bool) {
@@ -44,7 +45,7 @@ func TestParseCombatLog(t *testing.T) {
 		r.NoError(err)
 
 		r.Equal(
-			[]*DeathRecord{
+			[]DeathRecord{
 				{
 					LineNum:  8419,
 					Original: "21:42:29.979  CMBT   | Killed NikSvir\t Ship_Race2_S_T3_Premium|0000002478;\t killer ZiroTwo|0000058934 Weapon_Railgun_Sniper_T4_Rel ",
@@ -78,7 +79,7 @@ func TestParseCombatLog(t *testing.T) {
 		)
 
 		r.Equal(
-			[]*DeathRecord{
+			[]DeathRecord{
 				{
 					LineNum:  19159,
 					Original: "21:44:00.880  CMBT   | Killed Inspiration\t Ship_Race1_M_T3_Faction3|0000149939;\t killer ZiroTwo|0000058934 Weapon_Railgun_Sniper_T4_Rel ",
@@ -101,7 +102,7 @@ func TestParseCombatLog(t *testing.T) {
 		defer file.Close()
 
 		awards, punishments, err := ParseCombatLog(
-			file,
+			bufio.NewScanner(file),
 			"ZiroTwo",
 			time.Date(2021, time.October, 19, 23, 0, 0, 0, time.Local),
 			func(s string) (int, bool) {

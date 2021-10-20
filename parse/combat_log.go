@@ -2,8 +2,6 @@ package parse
 
 import (
 	"bufio"
-	"errors"
-	"io"
 	"regexp"
 	"strings"
 	"time"
@@ -33,16 +31,20 @@ type DeathRecord struct {
 
 // ParseCombatLog достаёт из лога информацию об убийствах до определённого времени (коцна боя по идее)
 func ParseCombatLog(
-	r io.Reader,
+	scanner *bufio.Scanner,
 	yourNickname string,
 	until time.Time,
 	checkAward func(string) (int, bool),
-) (awards, punishments []*DeathRecord, err error) {
-	scanner := bufio.NewScanner(r)
+) (awards, punishments []DeathRecord, err error) {
+	killerLine := "killer " + yourNickname
+
 	for lineNum := 1; scanner.Scan(); lineNum++ {
 		line := scanner.Text()
 
-		if !strings.Contains(line, "killer "+yourNickname) {
+		if checkAfter(line, until) {
+			break
+		}
+		if !strings.Contains(line, killerLine) {
 			continue
 		}
 
@@ -52,7 +54,7 @@ func ParseCombatLog(
 			continue
 		}
 
-		record := &DeathRecord{
+		record := DeathRecord{
 			LineNum:  lineNum,
 			Original: line,
 			Time:     fields[fieldTime],
@@ -65,7 +67,6 @@ func ParseCombatLog(
 			continue
 		}
 
-		// TODO add a check if the player was in the group
 		award, ok := checkAward(record.Killed)
 		if !ok {
 			continue
@@ -79,10 +80,19 @@ func ParseCombatLog(
 		}
 	}
 
-	err = scanner.Err()
-	if errors.Is(err, io.EOF) {
-		return nil, nil, err
-	}
-
 	return awards, punishments, err
+}
+
+func checkAfter(line string, until time.Time) bool {
+	idx := strings.Index(line, " ")
+	if idx == -1 {
+		return false
+	}
+	logTime, err := time.Parse(timeFormat, line[:idx])
+	if err == nil {
+		if logTime.After(until) {
+			return true
+		}
+	}
+	return false
 }

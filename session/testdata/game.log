@@ -1,0 +1,1091 @@
+
+--- Date: 2021-10-20 (Wed Oct 2021) +0300 UTC+03:00
+
+12:05:46.150         | //////////////////////////////////////////////////////////////////////////////
+12:05:46.150         | //
+12:05:46.150         | // Build: StarConflict 1.9.2a.146826 (Linux) (Oct  1 2021 11:07:44)
+12:05:46.150         | //
+12:05:46.150         | //////////////////////////////////////////////////////////////////////////////
+12:05:46.150         | 
+12:05:46.166         | Steam initialized appId 212070, userSteamID 1|1|33778b8a, userName 'feresey'
+12:05:48.184         | Try to setup resolution 1920x1080 1920x1080 0
+12:05:48.694         | Try to setup resolution 1920x1080 1920x1080 0
+12:05:48.694         | reset d3d device
+12:05:48.800         | Client language: RUSSIAN
+12:05:48.903         | Number of audio devices: 2
+12:05:48.903         |  Audio device 0: Default Output Device
+12:05:48.903         | 	Sound caps: 
+12:05:48.903         | 	Speaker mode: STEREO
+12:05:48.903         |  Audio device 1: Starship/Matisse HD Audio Controller Аналоговый стерео
+12:05:48.903         | 	Sound caps: 
+12:05:48.903         | 	Speaker mode: STEREO
+12:05:48.903         | Number of recording audio devices: 3
+12:05:48.903         |  Recording audio device 0: Default Input Device
+12:05:48.903         |  Recording audio device 1: Monitor of Starship/Matisse HD Audio Controller Аналоговый стерео
+12:05:48.903         |  Recording audio device 2: Starship/Matisse HD Audio Controller Аналоговый стерео
+12:05:48.903         | Speaker mode: STEREO
+12:05:50.783  WARNING| Could not load ship specularity texture levels\envsettings\default/ship_specularity.dds, used level specularity texture
+12:05:50.783  WARNING| Could not load ship irradiance texture levels\envsettings\default/ship_irradiance.dds, used level irradiance texture
+12:05:50.783         | Environment setting 'default' loaded
+12:05:50.787         | AutogenManager::InitFromLua(): autogen data is loaded successfull
+12:05:50.787         | BattlePass::ReadDescFromLua(): BattlePass desc loaded successfully
+12:05:50.791         | Entity Defs hash 72512913. calculated in 5.70 ms
+12:05:50.794         | BnRandCaller succeeded
+12:05:50.801         | Try to setup resolution 1920x1055 1920x1055 0
+12:05:50.801         | reset d3d device
+12:05:51.557         | ReplayManager: stopping activity due to map change
+12:05:51.560         | Peak models: 228
+12:05:51.560         | Peak geometries: 52. Cur geometries: 52
+12:05:51.651         | ====== starting level: 'levels/mainmenu/mainmenu'  ======
+12:05:51.681         | Remove autogen defs
+12:05:51.682         | Remove autogen defs
+12:05:51.683  WARNING| Could not load ship specularity texture levels\envsettings\mainmenu/ship_specularity.dds, used level specularity texture
+12:05:51.683  WARNING| Could not load ship irradiance texture levels\envsettings\mainmenu/ship_irradiance.dds, used level irradiance texture
+12:05:51.683         | Environment setting 'mainmenu' loaded
+12:05:52.845         | MasterServer_RequestServerStatus
+12:05:52.845         | MasterServer_RequestServerVersion
+12:05:52.845         | MasterServer_RequestNewsFeed
+12:05:52.845         | MasterServer_RequestServerAddresess
+12:05:52.846         | Requesting web advert ...
+12:05:52.862         | ====== level started:  'levels/mainmenu/mainmenu' success ======
+12:05:52.918         | MasterServer_OnServerStatus: status code 0, server status 1
+12:05:52.919         | MasterServer_OnServerVersion: status code 0, version 1.9.2a.146826
+, my version is 1.9.2a.146826
+12:05:52.919         | MasterServer_OnServerAddresess: status code 0
+12:05:52.919         | MasterServer_OnWebAdvertisement: status code 0
+12:05:52.919         | MasterServer_OnWebAdvertisement: loading image 0/0 from cache...
+12:05:52.919         | MasterServer_OnWebAdvertImage: status code 0
+12:05:52.939         | MasterServer_OnWebAdvertisement: loading image 0/1 from cache...
+12:05:52.940         | MasterServer_OnWebAdvertImage: status code 0
+12:05:52.940         | MasterServer_OnWebAdvertisement: loading image 1/0 from cache...
+12:05:52.940         | MasterServer_OnWebAdvertImage: status code 0
+12:05:52.953         | MasterServer_OnWebAdvertisement: loading image 1/1 from cache...
+12:05:52.953         | MasterServer_OnWebAdvertImage: status code 0
+12:05:52.967         | MasterServer_OnWebAdvertisement: loading image 2/0 from cache...
+12:05:52.968         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.026         | MasterServer_OnWebAdvertisement: loading image 2/1 from cache...
+12:05:53.026         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.026         | MasterServer_OnWebAdvertisement: loading image 3/0 from cache...
+12:05:53.026         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.033         | MasterServer_OnWebAdvertisement: loading image 3/1 from cache...
+12:05:53.033         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.033    ERROR| MasterServer_OnWebAdvertImage: failed to load image: progressive jpeg
+12:05:53.034         | MasterServer_OnWebAdvertisement: loading image 4/0 from cache...
+12:05:53.034         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.041         | MasterServer_OnWebAdvertisement: loading image 4/1 from cache...
+12:05:53.041         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.041    ERROR| MasterServer_OnWebAdvertImage: failed to load image: progressive jpeg
+12:05:53.041         | MasterServer_OnWebAdvertisement: loading image 5/0 from cache...
+12:05:53.041         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.047         | MasterServer_OnWebAdvertisement: loading image 5/1 from cache...
+12:05:53.047         | MasterServer_OnWebAdvertImage: status code 0
+12:05:53.047         | Finalizing WebAd image fetching.
+12:05:53.053  WARNING| frame 67 gameGlobals.frameTimeReal is too large (0.133348)
+12:05:53.086         | MasterServer_OnNewsFeed: status code 0
+12:05:54.363         | MasterServerEndpoint: connecting to load balancer at 23.111.211.205:3801 [0]...
+12:05:54.379         | MasterServerEndpoint: connected to load balancer 23.111.211.205:3801, awaiting shard address...
+12:05:54.395         | Applying LB cvars...
+12:05:54.395         | 'mss_playerBoughtVesselAdCooldown' <- '20.000'
+12:05:54.395         | 'clan_shipBuildHighRanks' <- '3.000'
+12:05:54.395         | 'sv_dailyWinPvpExpRewardCf' <- '2.000'
+12:05:54.395         | 'sv_dailyWinCoopExpRewardCf' <- '2.000'
+12:05:54.395         | 'event_halloween' <- '0.000'
+12:05:54.395         | 'event_claws' <- '0.000'
+12:05:54.395         | 'sv_dailyWinPveExpRewardCf' <- '2.000'
+12:05:54.395         | 'clan_shipUpgradeCanBuild' <- '3.000'
+12:05:54.395         | 'clan_shipPartsCanBuild' <- '4.000'
+12:05:54.395         | 'mss_playerBoughtVesselAdLoBrace' <- '-4.000'
+12:05:54.395         | 'sv_dailyWinBrawlExpRewardCf' <- '2.000'
+12:05:54.395         | 'cl_showBiomorphsKilledCounter' <- '0.000'
+12:05:54.395         | 'mss_playerBoughtVesselAdHiBrace' <- '4.000'
+12:05:54.395         | OnMessageClient(): received shard address: (23.111.211.207:3802)
+12:05:54.395         | OnMessageClient(): received shard address: (23.111.211.208:3802)
+12:05:54.395         | OnMessageClient(): received shard address: (23.111.211.205:3802)
+12:05:54.395         | OnMessageClient(): received chat server address (23.111.211.207:3815)
+12:05:54.395         | ConnectNextShard(): 3 - try establish connect with shard: 23.111.211.207:3802
+12:05:54.395         | disconnected from masterServer with reason 0
+12:05:54.395         | Disconnecting from load balancer
+12:05:54.412         | MasterServerEndpoint: connected to shard 23.111.211.207:3802, awaiting auth request...
+12:05:54.504         | Profile 'lol' saved successfully in '/home/lol/.local/share/starconflict/profiles/0001.prfl'
+12:05:55.294         | Try to setup resolution 1920x1080 1920x1080 0
+12:05:55.294         | reset d3d device
+12:05:56.055  WARNING| frame 200 gameGlobals.frameTimeReal is too large (0.775091)
+12:05:58.561         | MasterServerEndpoint: Successfully login to masterServer, uid 2516405, nick ZiroTwo, spaceStationZoneId 2
+12:05:58.814         | ShipPresetsRead: ship presets are successfully read from /home/lol/.local/share/starconflict/ship_presets/ship_presets_2516405.shpr
+12:05:58.814         | MasterServerEndpoint::UserNotesReadFromFile: user notes are successfully read from /home/lol/.local/share/starconflict/user_notes/user_notes_2516405.usnt
+12:05:58.814  WARNING| m_bufferizedUICalls delivery took 5.3 ms
+12:05:58.828         | StoreSvc: received store hash, its f0e71720
+12:05:58.828         | StoreSvc: loading store cache
+12:05:58.828         | StoreSvc: cache signature matches, loading the store from cache
+12:05:58.828         | Game store size : 933.22656 Kb
+12:05:58.841         | StoreSvc: loading base store took 21.4 ms, but there is a patch probs...
+12:05:58.861         | Store patch size : 0.98145 Kb
+12:05:58.861         | Game store was packed, unpacked size : 2.01367 Kb
+12:05:58.861         | StoreSvc: proceeding to special values loading...
+12:05:58.965  WARNING| m_bufferizedUICalls delivery took 13.6 ms
+12:05:59.032  WARNING| m_bufferizedUICalls delivery took 6.8 ms
+12:05:59.089  WARNING| m_bufferizedUICalls delivery took 18.0 ms
+12:05:59.132  WARNING| m_bufferizedUICalls delivery took 27.5 ms
+12:05:59.137         | AC_LOAD_INITIAL_PLAYER_DATA - reward schedule is:
+12:05:59.137         | {
+12:05:59.137         | 	"0":
+12:05:59.137         | 	{
+12:05:59.137         | 		"1":
+12:05:59.137         | 		{
+12:05:59.137         | 			"goldReward": 10.000
+12:05:59.137         | 			"hourBegin": 13.000
+12:05:59.137         | 			"hourEnd": 24.000
+12:05:59.137         | 		}
+12:05:59.137         | 	}
+12:05:59.137         | 	"1":
+12:05:59.137         | 	{
+12:05:59.137         | 		"1":
+12:05:59.137         | 		{
+12:05:59.137         | 			"goldReward": 10.000
+12:05:59.137         | 			"hourBegin": 0.000
+12:05:59.137         | 			"hourEnd": 1.000
+12:05:59.137         | 		}
+12:05:59.137         | 	}
+12:05:59.137         | }
+12:05:59.137         | AC_LOAD_INITIAL_PLAYER_DATA - pve scheduled levels are:
+12:05:59.137         | {
+12:05:59.137         | 	"0": s1550_pve_asteroid_building
+12:05:59.137         | 	"1": pve_jericho_base
+12:05:59.137         | }
+12:05:59.138  WARNING| script (ui/scripts/public/uipublic.lua@0): UI:MasterServer_OnPveScheduledLevels levels:
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:05:59.138  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:00.096  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:UpdateServerData_OnUserProfileUpdate: atlas update
+12:06:00.117  WARNING| m_bufferizedUICalls delivery took 36.2 ms
+12:06:00.132         | ReplayManager: stopping activity due to map change
+12:06:00.135         | Peak entities: 197
+12:06:00.136         | Peak models: 245
+12:06:00.136         | Peak geometries: 389. Cur geometries: 280
+12:06:00.214         | ====== starting level: 'levels/mainmenu/mm_federation'  ======
+12:06:00.258         | Remove autogen defs
+12:06:00.258         | Remove autogen defs
+12:06:00.262  WARNING| Could not load ship specularity texture levels/mainmenu/mm_federation\ship_specularity0.dds, used level specularity texture
+12:06:00.262  WARNING| Could not load ship irradiance texture levels/mainmenu/mm_federation\ship_irradiance0.dds, used level irradiance texture
+12:06:00.262         | Environment setting 'mm_federation' loaded
+12:06:01.083         | ====== level started:  'levels/mainmenu/mm_federation' success ======
+12:06:01.083         | Successfuly saved userdata (ver:72562) to server
+12:06:01.111  WARNING| m_bufferizedUICalls delivery took 47.1 ms
+12:06:01.167         | Successfuly saved userdata (ver:72563) to server
+12:06:07.806  WARNING| m_bufferizedUICalls delivery took 17.2 ms
+12:06:08.347         | {
+12:06:08.347         | 	"arcade": 1.000
+12:06:08.347         | 	"region": 0.000
+12:06:08.347         | }
+12:06:08.828         | MasterServerEndpoint: enter matchmaking queue
+12:06:08.828  WARNING| script (ui/scripts/public/uipublic.lua@0): ^5UI:MasterServer_OnEnterMMQueue
+12:06:08.836  WARNING| m_bufferizedUICalls delivery took 12.8 ms
+12:06:16.018  WARNING| m_bufferizedUICalls delivery took 9.9 ms
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:45.996  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:06:46.018  WARNING| m_bufferizedUICalls delivery took 8.6 ms
+12:07:46.018  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:07:46.346         | MasterServerEndpoint: leave matchmaking queue ( but will join the game soon )
+12:07:46.351  WARNING| m_bufferizedUICalls delivery took 8.0 ms
+12:07:49.196         | nextRecheckOnDSFailure 639.943, vid 25649042
+12:07:49.196         | nextRecheckOnDSFailure 639.943, vid 29122661
+12:07:49.196         | nextRecheckOnDSFailure 639.943, vid 31199954
+12:07:49.196         | nextRecheckOnDSFailure 639.943, vid 31270713
+12:07:49.264  WARNING| m_bufferizedUICalls delivery took 114.9 ms
+12:07:49.267         | MasterServerSession: connect to dedicated server, session 46025398, at addr 198.11.236.68|35002
+12:07:49.291         | client: start connecting to 198.11.236.68|35002...
+12:07:49.779         | client: connected to 198.11.236.68|35002, MTU 1492. setting up session...
+12:07:49.996         | client. send version check message (40 bytes)
+12:07:50.846         | client. got onConnect init message. total 51490 bytes
+12:07:50.863         | Peak entities: 450
+12:07:50.864         | Peak models: 300
+12:07:50.866         | Peak geometries: 759. Cur geometries: 280
+12:07:50.952  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 337 in slot 1 not found
+12:07:50.952  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 367 in slot 2 not found
+12:07:50.952  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 405 in slot 3 not found
+12:07:50.952  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 430 in slot 4 not found
+12:07:50.952         | Remove autogen defs
+12:07:50.953         | client: ADD_PLAYER 0 (DeadLife [], 1150090) status 4 team 2
+12:07:50.953         | client: ADD_PLAYER 1 (alexsolo [], 3671904) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 1 team 1
+12:07:50.953         | client: ADD_PLAYER 3 (Tuuumas [], 2067857) status 2 team 2
+12:07:50.953         | client: ADD_PLAYER 54 (Kovax, 0) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 55 (kingskid, 0) status 4 team 2
+12:07:50.953         | client: ADD_PLAYER 56 (Atlantiec, 0) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 57 (Bubba, 0) status 4 team 2
+12:07:50.953         | client: ADD_PLAYER 58 (Saireks, 0) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 59 (TeraPia, 0) status 4 team 2
+12:07:50.953         | client: ADD_PLAYER 60 (fortitou, 0) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 61 (Shiraze, 0) status 4 team 2
+12:07:50.953         | client: ADD_PLAYER 62 (Badrobat, 0) status 4 team 1
+12:07:50.953         | client: ADD_PLAYER 63 (Kpivoi, 0) status 4 team 2
+12:07:50.953         | client: server assigned id 2
+12:07:50.953         | client: got level load message 'lumen_constructionsite'
+12:07:50.956         | ReplayManager: stopping activity due to map change
+12:07:50.984         | Peak geometries: 0. Cur geometries: 280
+12:07:51.055         | ====== starting level: 'levels/federation/lumen_constructionsite' KingOfTheHill client ======
+12:07:51.114         | Remove autogen defs
+12:07:51.229  WARNING| Async queue overflow
+12:07:51.298         | Resume async queue pushing
+12:07:51.362  WARNING| Async queue overflow
+12:07:51.397         | Resume async queue pushing
+12:07:51.411  WARNING| Async queue overflow
+12:07:51.517         | Resume async queue pushing
+12:07:51.519         | Environment setting 'fed_lumen_constructionsite' loaded
+12:07:51.655         | client: send ready message
+12:07:51.852         | Remove autogen defs
+12:07:51.852         | Added def: Module_Autogen_761325081, idx: 21538, total: 1
+12:07:51.852         | Added spell def: Spell_AG_SpawnBonus_Damage_Autogen_6567
+12:07:51.852         | Added def: Module_Autogen_758578406, idx: 21539, total: 2
+12:07:51.852         | Added def: Module_Autogen_731715249, idx: 21540, total: 3
+12:07:51.852         | Added spell def: Spell_AG_ReserveShield_Autogen_6568
+12:07:51.852         | Added spell def: Spell_AG_HealBonusOnKill_Autogen_6569
+12:07:51.852         | Added def: Module_Autogen_465398875, idx: 21541, total: 4
+12:07:51.852         | Added def: Module_Autogen_366503346, idx: 21542, total: 5
+12:07:51.852         | Added def: Module_Autogen_711579013, idx: 21543, total: 6
+12:07:51.852         | Added spell def: Spell_AG_SpawnBonus_Heal_Autogen_6570
+12:07:51.920         | client: ADD_PLAYER 0 (DeadLife [FAITH], 1150090) status 4 team 2
+12:07:51.920         | client: ADD_PLAYER 1 (alexsolo [XRIPX], 3671904) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 2 team 1
+12:07:51.920         | client: ADD_PLAYER 3 (Tuuumas [FlyAR], 2067857) status 2 team 2
+12:07:51.920         | client: ADD_PLAYER 54 (Kovax, 0) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 55 (kingskid, 0) status 4 team 2
+12:07:51.920         | client: ADD_PLAYER 56 (Atlantiec, 0) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 57 (Bubba, 0) status 4 team 2
+12:07:51.920         | client: ADD_PLAYER 58 (Saireks, 0) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 59 (TeraPia, 0) status 4 team 2
+12:07:51.920         | client: ADD_PLAYER 60 (fortitou, 0) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 61 (Shiraze, 0) status 4 team 2
+12:07:51.920         | client: ADD_PLAYER 62 (Badrobat, 0) status 4 team 1
+12:07:51.920         | client: ADD_PLAYER 63 (Kpivoi, 0) status 4 team 2
+12:07:51.924         | client: player 62 leave game
+12:07:51.929         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 4 team 1
+12:07:51.930         | client: got init message (and 1st snapshot). ping 155
+12:07:51.930         | VoiceChat::InitSounds: creating raw sounds ...
+12:07:51.935         | VoiceChat::InitSounds: ... done (0,0).
+12:07:52.579         | ====== level started:  'levels/federation/lumen_constructionsite' success ======
+12:07:54.048         | client: player 63 leave game
+12:07:54.061         | client: ADD_PLAYER 3 (Tuuumas [FlyAR], 2067857) status 4 team 2
+12:08:03.904  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:08:03.934         | Environment setting 'fed_lumen_constructionsite' loaded
+12:08:05.386  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:08:16.018  WARNING| m_bufferizedUICalls delivery took 7.9 ms
+12:08:46.019  WARNING| m_bufferizedUICalls delivery took 7.3 ms
+12:09:02.918  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:09:16.053  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:09:42.235  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:09:46.036  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:10:16.055  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:10:19.250  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:10:20.037  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:10:20.057         | Environment setting 'fed_lumen_constructionsite' loaded
+12:10:46.040  WARNING| m_bufferizedUICalls delivery took 13.0 ms
+12:10:51.521  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:11:15.673  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:11:16.038  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:11:34.716  WARNING| client: removing entity netId 2186 but it doesn't exist (def 'SpellAuraEntity')
+12:11:38.472  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:11:46.071  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:11:52.682         | ReplayManager: replay (2.57Mb) is avaibalbe for downloading!
+12:11:54.582         | Loot: Silver_Junk_T4_4: 1
+12:11:55.998         | Loot: Silver_Junk_T4_13: 1
+12:11:56.431         | nextRecheckOnDSFailure 393.765, vid 25649042
+12:11:56.431         | nextRecheckOnDSFailure 393.765, vid 29122661
+12:11:56.431         | nextRecheckOnDSFailure 393.765, vid 31199954
+12:11:56.431         | nextRecheckOnDSFailure 393.765, vid 31270713
+12:11:56.490  WARNING| m_bufferizedUICalls delivery took 98.1 ms
+12:11:56.927  WARNING| m_bufferizedUICalls delivery took 49.2 ms
+12:11:58.415         | Loot: Silver_Junk_T4_4: 1
+12:11:59.598         | Loot: Silver_Junk_T4_4: 1
+12:12:00.765         | Loot: ship_part_Ship_Race3_S_T4_PremUniq: 0
+12:12:00.765         | Iridium_plate: 1
+12:12:00.765  WARNING| script (ui/scripts/windows/lootwnd.lua@0): UI.LootWnd:OnScanResult()[ERROR]: invalid type of the 12-th parameter ("salvagePremiumCantAfford"); "boolean" expected, got "number"
+12:12:00.765  WARNING| script (ui/scripts/windows/lootwnd.lua@0): UI.LootWnd:OnScanResult()[ERROR]: invalid type of the 13-th parameter ("playerGold"); u64 expected, got "boolean"
+12:12:01.848         | client: player 0 leave game
+12:12:01.915         | Loot: Silver_Junk_T4_4: 1
+12:12:02.648         | client: player 3 leave game
+12:12:03.381         | Loot: Silver_Junk_T4_12: 1
+12:12:07.398         | VoiceChat::ResetSounds: releasing raw sounds (0,0)...
+12:12:07.451         | VoiceChat::ResetSounds: ... done
+12:12:07.451         | client: avgPing 155.3/0.6; avgPacketLoss 0.0/0.0%; avgSnapshotLoss 0.0/0.2%, MTU 1492
+12:12:07.451         | client: connection closed. DR_CLIENT_GAME_FINISHED
+12:12:07.451         | Network stats (bytes per second): avg pushed 1218, max pushed 1652, avg sent 2215, max sent 2977, avg received 5042, max received 8984
+12:12:07.581         | ReplayManager: stopping activity due to map change
+12:12:07.598         | Peak entities: 836
+12:12:07.598         | Peak models: 433
+12:12:07.603         | Peak geometries: 1671. Cur geometries: 280
+12:12:07.726         | ====== starting level: 'levels/mainmenu/mm_federation'  ======
+12:12:07.769         | Remove autogen defs
+12:12:07.769         | Remove autogen defs
+12:12:07.773  WARNING| Could not load ship specularity texture levels/mainmenu/mm_federation\ship_specularity0.dds, used level specularity texture
+12:12:07.773  WARNING| Could not load ship irradiance texture levels/mainmenu/mm_federation\ship_irradiance0.dds, used level irradiance texture
+12:12:07.773         | Environment setting 'mm_federation' loaded
+12:12:08.632         | ====== level started:  'levels/mainmenu/mm_federation' success ======
+12:12:08.632         | Environment setting 'mm_federation' loaded
+12:12:08.632         | Successfuly saved userdata (ver:72564) to server
+12:12:08.647  WARNING| m_bufferizedUICalls delivery took 25.6 ms
+12:12:08.683  WARNING| frame 22394 gameGlobals.frameTimeReal is too large (0.119671)
+12:12:08.693         | Successfuly saved userdata (ver:72565) to server
+12:12:13.818         | {
+12:12:13.818         | 	"arcade": 1.000
+12:12:13.818         | 	"region": 0.000
+12:12:13.818         | }
+12:12:14.264         | MasterServerEndpoint: enter matchmaking queue
+12:12:14.265  WARNING| script (ui/scripts/public/uipublic.lua@0): ^5UI:MasterServer_OnEnterMMQueue
+12:12:14.272  WARNING| m_bufferizedUICalls delivery took 13.0 ms
+12:12:16.075  WARNING| m_bufferizedUICalls delivery took 16.0 ms
+12:12:46.053  WARNING| m_bufferizedUICalls delivery took 7.8 ms
+12:13:46.071  WARNING| m_bufferizedUICalls delivery took 8.0 ms
+12:14:16.087  WARNING| m_bufferizedUICalls delivery took 7.8 ms
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:16.183  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:14:46.103  WARNING| m_bufferizedUICalls delivery took 6.2 ms
+12:15:16.108  WARNING| m_bufferizedUICalls delivery took 13.4 ms
+12:15:46.120  WARNING| m_bufferizedUICalls delivery took 6.2 ms
+12:16:16.122  WARNING| m_bufferizedUICalls delivery took 8.0 ms
+12:17:16.122  WARNING| m_bufferizedUICalls delivery took 6.8 ms
+12:17:46.129  WARNING| m_bufferizedUICalls delivery took 18.5 ms
+12:18:16.124  WARNING| m_bufferizedUICalls delivery took 10.2 ms
+12:18:46.107  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:19:16.107  WARNING| m_bufferizedUICalls delivery took 8.0 ms
+12:19:46.124  WARNING| m_bufferizedUICalls delivery took 8.7 ms
+12:20:16.107  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:20:25.402         | MasterServerEndpoint: leave matchmaking queue ( but will join the game soon )
+12:20:25.407  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:20:30.619         | nextRecheckOnDSFailure 1079.877, vid 25649042
+12:20:30.619         | nextRecheckOnDSFailure 1079.877, vid 29122661
+12:20:30.619         | nextRecheckOnDSFailure 1079.877, vid 31199954
+12:20:30.619         | nextRecheckOnDSFailure 1079.877, vid 31270713
+12:20:30.693  WARNING| m_bufferizedUICalls delivery took 124.5 ms
+12:20:32.202         | MasterServerSession: connect to dedicated server, session 46025447, at addr 95.211.237.129|35000
+12:20:32.227         | client: start connecting to 95.211.237.129|35000...
+12:20:32.369         | client: connected to 95.211.237.129|35000, MTU 1492. setting up session...
+12:20:32.436         | client. send version check message (40 bytes)
+12:20:32.702         | client. got onConnect init message. total 50664 bytes
+12:20:32.720         | Peak entities: 450
+12:20:32.720         | Peak models: 300
+12:20:32.722         | Peak geometries: 759. Cur geometries: 280
+12:20:32.827  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 355 in slot 1 not found
+12:20:32.827  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 385 in slot 2 not found
+12:20:32.827  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 423 in slot 3 not found
+12:20:32.827  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 448 in slot 4 not found
+12:20:32.827         | Remove autogen defs
+12:20:32.828         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 1 team 1
+12:20:32.828         | client: ADD_PLAYER 1 (lafan4ik, 707775) status 6 team 2
+12:20:32.828         | client: server assigned id 0
+12:20:32.828         | client: got level load message 's1338_pandora_dreadnwreck'
+12:20:32.831         | ReplayManager: stopping activity due to map change
+12:20:32.844         | Peak geometries: 0. Cur geometries: 280
+12:20:32.937         | ====== starting level: 'levels/area1/s1338_pandora_dreadnwreck' Control client ======
+12:20:33.014         | Remove autogen defs
+12:20:33.111  WARNING| Async queue overflow
+12:20:33.180         | Resume async queue pushing
+12:20:33.257  WARNING| Async queue overflow
+12:20:33.293         | Resume async queue pushing
+12:20:33.309  WARNING| Async queue overflow
+12:20:33.415         | Resume async queue pushing
+12:20:33.416  WARNING| Could not load ship specularity texture levels\envsettings\s1338_pandora_dreadnwreck/ship_specularity.dds, used level specularity texture
+12:20:33.416  WARNING| Could not load ship irradiance texture levels\envsettings\s1338_pandora_dreadnwreck/ship_irradiance.dds, used level irradiance texture
+12:20:33.416         | Environment setting 's1338_pandora_dreadnwreck' loaded
+12:20:33.441         | client: send ready message
+12:20:33.511         | Remove autogen defs
+12:20:33.575         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 2 team 1
+12:20:33.575         | client: ADD_PLAYER 1 (lafan4ik, 707775) status 2 team 2
+12:20:33.579         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 4 team 1
+12:20:33.581         | client: got init message (and 1st snapshot). ping 39
+12:20:33.581         | VoiceChat::InitSounds: creating raw sounds ...
+12:20:33.583         | VoiceChat::InitSounds: ... done (1,1).
+12:20:34.220         | ====== level started:  'levels/area1/s1338_pandora_dreadnwreck' success ======
+12:20:34.220         | client: ADD_PLAYER 1 (lafan4ik, 707775) status 4 team 2
+12:20:36.203         | client: ADD_PLAYER 63 (pulsar777, 0) status 4 team 2
+12:20:36.206         | client: ADD_PLAYER 62 (Zyatek7, 0) status 4 team 1
+12:20:36.209         | client: ADD_PLAYER 61 (LuckyD0g, 0) status 4 team 2
+12:20:36.212         | client: ADD_PLAYER 60 (Kartal13, 0) status 4 team 1
+12:20:36.216         | client: ADD_PLAYER 59 (Khayendalis, 0) status 4 team 2
+12:20:36.222         | client: ADD_PLAYER 58 (Technarius, 0) status 4 team 1
+12:20:36.227         | client: ADD_PLAYER 57 (mcb76, 0) status 4 team 2
+12:20:36.231         | client: ADD_PLAYER 56 (Raylight, 0) status 4 team 1
+12:20:36.236         | client: ADD_PLAYER 55 (strizhulya, 0) status 4 team 2
+12:20:36.241         | client: ADD_PLAYER 54 (Dacemcool, 0) status 4 team 1
+12:20:45.625  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:20:45.656         | Environment setting 's1338_pandora_dreadnwreck' loaded
+12:20:47.107  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:20:52.886  WARNING| client: removing entity netId 276 but it doesn't exist (def 'SpellAuraEntity')
+12:21:16.108  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:21:46.113  WARNING| m_bufferizedUICalls delivery took 14.9 ms
+12:22:02.955  WARNING| Client: received Entity sync notification #0 for entity with netId 2168, but entity doesn't exist(def 'Projectile_SuddenFire_T4_Epic')
+12:22:02.955  WARNING| Client: received Entity sync notification #0 for entity with netId 2167, but entity doesn't exist(def 'Projectile_SuddenFire_T4_Epic')
+12:22:16.132  WARNING| m_bufferizedUICalls delivery took 18.0 ms
+12:22:34.106  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:22:37.543  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:22:37.562         | Environment setting 's1338_pandora_dreadnwreck' loaded
+12:22:38.308  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:22:38.776  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:22:38.795         | Environment setting 's1338_pandora_dreadnwreck' loaded
+12:22:46.129  WARNING| m_bufferizedUICalls delivery took 10.8 ms
+12:23:00.224  WARNING| client: removing entity netId 3908 but it doesn't exist (def 'Bonus_GreenEngineerScrap')
+12:23:16.112  WARNING| m_bufferizedUICalls delivery took 11.4 ms
+12:23:19.422  WARNING| client: removing entity netId 4647 but it doesn't exist (def 'SpellAuraEntity')
+12:23:46.127  WARNING| m_bufferizedUICalls delivery took 9.8 ms
+12:24:15.821         | ReplayManager: replay (2.74Mb) is avaibalbe for downloading!
+12:24:16.129  WARNING| m_bufferizedUICalls delivery took 12.8 ms
+12:24:18.004         | Loot: Silver_Junk_T3_13: 1
+12:24:19.188         | Loot: Silver_Junk_T3_3: 1
+12:24:20.254         | Loot: Silver_Junk_T3_101: 1
+12:24:20.821         | nextRecheckOnDSFailure 850.603, vid 25649042
+12:24:20.821         | nextRecheckOnDSFailure 850.603, vid 29122661
+12:24:20.821         | nextRecheckOnDSFailure 850.603, vid 31199954
+12:24:20.821         | nextRecheckOnDSFailure 850.603, vid 31270713
+12:24:20.874  WARNING| m_bufferizedUICalls delivery took 89.3 ms
+12:24:21.056  WARNING| m_bufferizedUICalls delivery took 32.1 ms
+12:24:21.204         | Loot: Silver_Junk_T3_3: 1
+12:24:21.210  WARNING| m_bufferizedUICalls delivery took 6.6 ms
+12:24:22.221         | Loot: Silver_Junk_T3_101: 1
+12:24:23.221         | Loot: Silver_Junk_T3_2: 1
+12:24:24.441         | Profile 'lol' saved successfully in '/home/lol/.local/share/starconflict/profiles/0001.prfl'
+12:24:24.804         | Loot: Silver_Junk_T3_13: 1
+12:24:25.091         | Profile 'lol' saved successfully in '/home/lol/.local/share/starconflict/profiles/0001.prfl'
+12:24:27.071         | client: player 1 leave game
+12:24:28.822         | VoiceChat::ResetSounds: releasing raw sounds (1,1)...
+12:24:28.941         | VoiceChat::ResetSounds: ... done
+12:24:28.941         | client: avgPing 39.0/1.3; avgPacketLoss 0.0/0.0%; avgSnapshotLoss 0.0/0.0%, MTU 1492
+12:24:28.941         | client: connection closed. DR_CLIENT_GAME_FINISHED
+12:24:28.941         | Network stats (bytes per second): avg pushed 1170, max pushed 1626, avg sent 2139, max sent 3024, avg received 6200, max received 12112
+12:24:29.058         | ReplayManager: stopping activity due to map change
+12:24:29.070         | Peak entities: 1041
+12:24:29.071         | Peak models: 427
+12:24:29.075         | Peak geometries: 1845. Cur geometries: 280
+12:24:29.212         | ====== starting level: 'levels/mainmenu/mm_federation'  ======
+12:24:29.255         | Remove autogen defs
+12:24:29.256         | Remove autogen defs
+12:24:29.259  WARNING| Could not load ship specularity texture levels/mainmenu/mm_federation\ship_specularity0.dds, used level specularity texture
+12:24:29.260  WARNING| Could not load ship irradiance texture levels/mainmenu/mm_federation\ship_irradiance0.dds, used level irradiance texture
+12:24:29.260         | Environment setting 'mm_federation' loaded
+12:24:30.115         | ====== level started:  'levels/mainmenu/mm_federation' success ======
+12:24:30.115         | Environment setting 'mm_federation' loaded
+12:24:30.116         | Successfuly saved userdata (ver:72566) to server
+12:24:30.132  WARNING| m_bufferizedUICalls delivery took 28.0 ms
+12:24:30.192  WARNING| frame 66755 gameGlobals.frameTimeReal is too large (0.116748)
+12:24:30.193         | Successfuly saved userdata (ver:72567) to server
+12:24:30.199  WARNING| frame 66756 gameGlobals.frameTimeReal is too large (0.125154)
+12:24:36.225  WARNING| m_bufferizedUICalls delivery took 6.5 ms
+12:24:36.806         | {
+12:24:36.806         | 	"arcade": 1.000
+12:24:36.806         | 	"region": 0.000
+12:24:36.806         | }
+12:24:37.404         | MasterServerEndpoint: enter matchmaking queue
+12:24:37.404  WARNING| script (ui/scripts/public/uipublic.lua@0): ^5UI:MasterServer_OnEnterMMQueue
+12:24:37.419  WARNING| m_bufferizedUICalls delivery took 24.7 ms
+12:24:46.126  WARNING| m_bufferizedUICalls delivery took 7.3 ms
+12:25:16.131  WARNING| m_bufferizedUICalls delivery took 15.4 ms
+12:25:33.971         | MasterServerEndpoint: leave matchmaking queue ( but will join the game soon )
+12:25:35.088         | nextRecheckOnDSFailure 645.056, vid 25649042
+12:25:35.088         | nextRecheckOnDSFailure 645.056, vid 29122661
+12:25:35.088         | nextRecheckOnDSFailure 645.056, vid 31199954
+12:25:35.088         | nextRecheckOnDSFailure 645.056, vid 31270713
+12:25:35.173  WARNING| m_bufferizedUICalls delivery took 142.6 ms
+12:25:35.177         | MasterServerSession: connect to dedicated server, session 46025464, at addr 95.211.237.129|35000
+12:25:35.202         | client: start connecting to 95.211.237.129|35000...
+12:25:35.338         | client: connected to 95.211.237.129|35000, MTU 1492. setting up session...
+12:25:35.389         | client. send version check message (40 bytes)
+12:25:35.654         | client. got onConnect init message. total 50586 bytes
+12:25:35.672         | Peak entities: 451
+12:25:35.673         | Peak models: 300
+12:25:35.674         | Peak geometries: 759. Cur geometries: 280
+12:25:35.776  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 336 in slot 1 not found
+12:25:35.776  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 366 in slot 2 not found
+12:25:35.776  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 404 in slot 3 not found
+12:25:35.776  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 429 in slot 4 not found
+12:25:35.776         | Remove autogen defs
+12:25:35.777         | client: ADD_PLAYER 0 (Velamont, 29106) status 2 team 1
+12:25:35.777         | client: ADD_PLAYER 1 (lafan4ik, 707775) status 4 team 2
+12:25:35.777         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 1 team 1
+12:25:35.777         | client: ADD_PLAYER 3 (SoNz [], 2837548) status 6 team 2
+12:25:35.777         | client: server assigned id 2
+12:25:35.777         | client: got level load message 'sirus_debrissite'
+12:25:35.781         | ReplayManager: stopping activity due to map change
+12:25:35.796         | Peak geometries: 0. Cur geometries: 280
+12:25:35.893         | ====== starting level: 'levels/area3/sirus_debrissite' KingOfTheHill client ======
+12:25:36.045         | Remove autogen defs
+12:25:36.151  WARNING| Async queue overflow
+12:25:36.253         | Resume async queue pushing
+12:25:36.276  WARNING| Async queue overflow
+12:25:36.347         | Resume async queue pushing
+12:25:36.357  WARNING| Async queue overflow
+12:25:36.428         | Resume async queue pushing
+12:25:36.484  WARNING| Async queue overflow
+12:25:36.591         | Resume async queue pushing
+12:25:36.606         | Environment setting 'empire_sirus_debrissite' loaded
+12:25:36.610  WARNING| Async queue overflow
+12:25:36.753         | Resume async queue pushing
+12:25:36.775         | client: send ready message
+12:25:36.860         | Remove autogen defs
+12:25:36.860         | Added def: Module_Autogen_2181501137, idx: 21543, total: 1
+12:25:36.861         | Added def: Module_Autogen_2164244336, idx: 21544, total: 2
+12:25:36.926         | client: ADD_PLAYER 0 (Velamont, 29106) status 4 team 1
+12:25:36.926         | client: ADD_PLAYER 1 (lafan4ik, 707775) status 4 team 2
+12:25:36.926         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 2 team 1
+12:25:36.926         | client: ADD_PLAYER 3 (SoNz [HPrim], 2837548) status 2 team 2
+12:25:36.929         | client: ADD_PLAYER 2 (ZiroTwo [xIDx], 2516405) status 4 team 1
+12:25:36.930         | client: got init message (and 1st snapshot). ping 37
+12:25:36.930         | VoiceChat::InitSounds: creating raw sounds ...
+12:25:36.932         | VoiceChat::InitSounds: ... done (2,2).
+12:25:37.565         | ====== level started:  'levels/area3/sirus_debrissite' success ======
+12:25:37.656         | client: ADD_PLAYER 63 (Khayendalis, 0) status 4 team 2
+12:25:37.661         | client: ADD_PLAYER 62 (Gravitonic, 0) status 4 team 1
+12:25:37.665         | client: ADD_PLAYER 61 (BAODED, 0) status 4 team 2
+12:25:37.668         | client: ADD_PLAYER 60 (Atlantiec, 0) status 4 team 1
+12:25:37.674         | client: ADD_PLAYER 59 (shadow123011, 0) status 4 team 2
+12:25:37.680         | client: ADD_PLAYER 58 (ArtemDoronin, 0) status 4 team 1
+12:25:37.685         | client: ADD_PLAYER 57 (Viktorius31rus, 0) status 4 team 2
+12:25:37.690         | client: ADD_PLAYER 56 (Miromar, 0) status 4 team 1
+12:25:44.105         | client: ADD_PLAYER 3 (SoNz [HPrim], 2837548) status 4 team 2
+12:25:46.162  WARNING| m_bufferizedUICalls delivery took 11.8 ms
+12:25:48.909  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:25:48.941         | Environment setting 'empire_sirus_debrissite' loaded
+12:25:50.394  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:26:16.153  WARNING| m_bufferizedUICalls delivery took 20.2 ms
+12:26:46.177  WARNING| m_bufferizedUICalls delivery took 7.1 ms
+12:27:16.179  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:27:21.192  WARNING| client: removing entity netId 2291 but it doesn't exist (def 'SpellAuraEntity')
+12:27:28.258  WARNING| Client: received Entity sync notification #0 for entity with netId 2588, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:27:29.725  WARNING| Client: received Entity sync notification #1 for entity with netId 2696, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:30.442  WARNING| Client: received Entity sync notification #1 for entity with netId 2727, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:31.191  WARNING| Client: received Entity sync notification #1 for entity with netId 2752, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:31.406  WARNING| Client: received Entity sync notification #0 for entity with netId 2761, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:27:31.925  WARNING| Client: received Entity sync notification #1 for entity with netId 2795, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:32.641  WARNING| Client: received Entity sync notification #1 for entity with netId 2837, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:32.857  WARNING| Client: received Entity sync notification #0 for entity with netId 2840, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:27:37.358  WARNING| Client: received Entity sync notification #1 for entity with netId 3048, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:38.089  WARNING| Client: received Entity sync notification #1 for entity with netId 3063, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:38.810  WARNING| Client: received Entity sync notification #1 for entity with netId 3076, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:41.674  WARNING| Client: received Entity sync notification #1 for entity with netId 3136, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:42.407  WARNING| Client: received Entity sync notification #1 for entity with netId 3176, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:43.139  WARNING| Client: received Entity sync notification #1 for entity with netId 3211, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:43.873  WARNING| Client: received Entity sync notification #1 for entity with netId 3247, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:44.590  WARNING| Client: received Entity sync notification #1 for entity with netId 3276, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:45.340  WARNING| Client: received Entity sync notification #1 for entity with netId 3299, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:46.179  WARNING| m_bufferizedUICalls delivery took 8.2 ms
+12:27:48.473  WARNING| Client: received Entity sync notification #1 for entity with netId 3371, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:49.256  WARNING| Client: received Entity sync notification #1 for entity with netId 3404, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:49.991  WARNING| Client: received Entity sync notification #1 for entity with netId 3432, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:50.722  WARNING| Client: received Entity sync notification #1 for entity with netId 3481, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:52.023  WARNING| Client: received Entity sync notification #1 for entity with netId 3555, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:27:54.640  WARNING| Client: received Entity sync notification #1 for entity with netId 3703, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:07.157  WARNING| client: removing entity netId 4247 but it doesn't exist (def 'SpellAuraEntity')
+12:28:12.557  WARNING| Client: received Entity sync notification #1 for entity with netId 4359, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:13.291  WARNING| Client: received Entity sync notification #1 for entity with netId 4383, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:14.009  WARNING| Client: received Entity sync notification #1 for entity with netId 4423, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:14.741  WARNING| Client: received Entity sync notification #1 for entity with netId 4470, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:15.474  WARNING| Client: received Entity sync notification #1 for entity with netId 4510, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:16.196  WARNING| m_bufferizedUICalls delivery took 8.3 ms
+12:28:16.208  WARNING| Client: received Entity sync notification #1 for entity with netId 4548, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:16.941  WARNING| Client: received Entity sync notification #1 for entity with netId 4588, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:17.675  WARNING| Client: received Entity sync notification #1 for entity with netId 4622, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:18.407  WARNING| Client: received Entity sync notification #1 for entity with netId 4669, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:19.124  WARNING| Client: received Entity sync notification #1 for entity with netId 4704, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:19.910  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:28:20.795  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:28:20.815         | Environment setting 'empire_sirus_debrissite' loaded
+12:28:22.491  WARNING| Client: received Entity sync notification #1 for entity with netId 4753, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:23.224  WARNING| Client: received Entity sync notification #1 for entity with netId 4760, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:23.274  WARNING| client: removing entity netId 4762 but it doesn't exist (def 'SpellAuraEntity')
+12:28:24.457  WARNING| Client: received Entity sync notification #1 for entity with netId 4783, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:24.526  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:28:25.190  WARNING| Client: received Entity sync notification #1 for entity with netId 4791, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:25.924  WARNING| Client: received Entity sync notification #1 for entity with netId 4805, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:26.657  WARNING| Client: received Entity sync notification #1 for entity with netId 4813, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:27.374  WARNING| Client: received Entity sync notification #1 for entity with netId 4833, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:29.278  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:28:29.298         | Environment setting 'empire_sirus_debrissite' loaded
+12:28:32.774  WARNING| Client: received Entity sync notification #1 for entity with netId 4881, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:33.506  WARNING| Client: received Entity sync notification #1 for entity with netId 4900, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:34.241  WARNING| Client: received Entity sync notification #1 for entity with netId 4924, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:34.957  WARNING| Client: received Entity sync notification #1 for entity with netId 4950, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:35.691  WARNING| Client: received Entity sync notification #1 for entity with netId 4981, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:36.424  WARNING| Client: received Entity sync notification #1 for entity with netId 4998, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:37.157  WARNING| Client: received Entity sync notification #1 for entity with netId 5009, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:38.057  WARNING| Client: received Entity sync notification #1 for entity with netId 5034, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:38.774  WARNING| Client: received Entity sync notification #1 for entity with netId 5041, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:39.508  WARNING| Client: received Entity sync notification #1 for entity with netId 5055, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:40.241  WARNING| Client: received Entity sync notification #1 for entity with netId 5065, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:40.974  WARNING| Client: received Entity sync notification #1 for entity with netId 5075, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:41.708  WARNING| Client: received Entity sync notification #1 for entity with netId 5090, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:46.180  WARNING| m_bufferizedUICalls delivery took 8.5 ms
+12:28:49.674  WARNING| Client: received Entity sync notification #0 for entity with netId 5309, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:28:50.007  WARNING| Client: received Entity sync notification #1 for entity with netId 5329, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:50.742  WARNING| Client: received Entity sync notification #1 for entity with netId 5358, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:51.459  WARNING| Client: received Entity sync notification #1 for entity with netId 5391, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:52.193  WARNING| Client: received Entity sync notification #1 for entity with netId 5414, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:52.926  WARNING| Client: received Entity sync notification #1 for entity with netId 5445, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:53.993  WARNING| Client: received Entity sync notification #1 for entity with netId 5506, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:54.725  WARNING| Client: received Entity sync notification #1 for entity with netId 5545, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:55.458  WARNING| Client: received Entity sync notification #1 for entity with netId 5585, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:28:57.642  WARNING| Client: received Entity sync notification #1 for entity with netId 5728, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:29:13.807  WARNING| client: removing entity netId 6435 but it doesn't exist (def 'SpellAuraEntity')
+12:29:16.194  WARNING| m_bufferizedUICalls delivery took 5.4 ms
+12:29:21.343  WARNING| Client: received Entity sync notification #0 for entity with netId 7080, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:29:22.459  WARNING| Client: received Entity sync notification #0 for entity with netId 7181, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:29:31.109  WARNING| Client: received Entity sync notification #0 for entity with netId 7895, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:29:46.198  WARNING| m_bufferizedUICalls delivery took 11.0 ms
+12:29:46.942  WARNING| Client: received Entity sync notification #0 for entity with netId 8724, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:29:53.225  WARNING| Client: received Entity sync notification #0 for entity with netId 9002, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:01.209  WARNING| Client: received Entity sync notification #0 for entity with netId 9454, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:02.325  WARNING| Client: received Entity sync notification #0 for entity with netId 9515, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:04.792  WARNING| Client: received Entity sync notification #1 for entity with netId 9664, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:05.475  WARNING| Client: received Entity sync notification #0 for entity with netId 9699, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:06.975  WARNING| Client: received Entity sync notification #1 for entity with netId 9775, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:09.609  WARNING| Client: received Entity sync notification #0 for entity with netId 9878, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:10.741  WARNING| Client: received Entity sync notification #0 for entity with netId 9910, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:11.741  WARNING| Client: received Entity sync notification #0 for entity with netId 9956, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:16.214  WARNING| m_bufferizedUICalls delivery took 10.9 ms
+12:30:19.875  WARNING| Client: received Entity sync notification #1 for entity with netId 10185, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:22.074  WARNING| Client: received Entity sync notification #1 for entity with netId 10228, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:35.108  WARNING| Client: received Entity sync notification #1 for entity with netId 10573, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:37.292  WARNING| Client: received Entity sync notification #1 for entity with netId 10647, but entity doesn't exist(def 'Projectile_SmartRL')
+12:30:46.220  WARNING| m_bufferizedUICalls delivery took 18.0 ms
+12:30:48.909  WARNING| Client: received Entity sync notification #0 for entity with netId 10951, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:30:56.160  WARNING| Client: received Entity sync notification #1 for entity with netId 11289, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:01.925  WARNING| Client: received Entity sync notification #1 for entity with netId 11433, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:03.841  WARNING| Client: received Entity sync notification #0 for entity with netId 11453, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:31:04.125  WARNING| Client: received Entity sync notification #1 for entity with netId 11464, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:05.974  WARNING| Client: received Entity sync notification #0 for entity with netId 11510, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:31:06.308  WARNING| Client: received Entity sync notification #1 for entity with netId 11516, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:09.959  WARNING| Client: received Entity sync notification #1 for entity with netId 11558, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:14.291  WARNING| Client: received Entity sync notification #1 for entity with netId 11717, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:16.220  WARNING| m_bufferizedUICalls delivery took 17.6 ms
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:16.610  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:31:17.944  WARNING| Client: received Entity sync notification #1 for entity with netId 11896, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:20.126  WARNING| Client: received Entity sync notification #1 for entity with netId 12004, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:22.326  WARNING| Client: received Entity sync notification #1 for entity with netId 12062, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:25.959  WARNING| Client: received Entity sync notification #1 for entity with netId 12155, but entity doesn't exist(def 'Projectile_SmartRL')
+12:31:46.214  WARNING| m_bufferizedUICalls delivery took 7.2 ms
+12:31:57.176  WARNING| Client: received Entity sync notification #0 for entity with netId 13225, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:31:58.310  WARNING| Client: received Entity sync notification #0 for entity with netId 13254, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:32:00.326  WARNING| Client: received Entity sync notification #0 for entity with netId 13303, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:32:02.214  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:32:02.247         | Environment setting 'empire_sirus_debrissite' loaded
+12:32:02.459  WARNING| Client: received Entity sync notification #0 for entity with netId 13366, but entity doesn't exist(def 'Projectile_BlastWeaponDestructor_T3_Mk3')
+12:32:03.699  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:32:16.215  WARNING| m_bufferizedUICalls delivery took 8.3 ms
+12:32:27.509  WARNING| Client: received Entity sync notification #8 for entity with netId 13813, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:32:27.509  WARNING| Client: received Entity sync notification #0 for entity with netId 13813, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:32:46.248  WARNING| m_bufferizedUICalls delivery took 8.8 ms
+12:32:49.675         | ReplayManager: replay (4.68Mb) is avaibalbe for downloading!
+12:32:53.942         | Loot: Silver_Junk_T3_12: 1
+12:32:55.608         | nextRecheckOnDSFailure 205.807, vid 25649042
+12:32:55.608         | nextRecheckOnDSFailure 205.807, vid 29122661
+12:32:55.608         | nextRecheckOnDSFailure 205.807, vid 31199954
+12:32:55.608         | nextRecheckOnDSFailure 205.807, vid 31270713
+12:32:55.666  WARNING| m_bufferizedUICalls delivery took 96.8 ms
+12:32:55.843  WARNING| m_bufferizedUICalls delivery took 57.3 ms
+12:32:56.227  WARNING| m_bufferizedUICalls delivery took 59.1 ms
+12:32:56.301  WARNING| m_bufferizedUICalls delivery took 12.4 ms
+12:32:56.409         | Loot: Silver_Junk_T3_12: 1
+12:32:57.408         | client: player 1 leave game
+12:32:57.642         | Loot: ship_part_Ship_Race3_S_T4_PremUniq: 0
+12:32:57.642         | Iridium_plate: 1
+12:32:57.642  WARNING| script (ui/scripts/windows/lootwnd.lua@0): UI.LootWnd:OnScanResult()[ERROR]: invalid type of the 12-th parameter ("salvagePremiumCantAfford"); "boolean" expected, got "number"
+12:32:57.642  WARNING| script (ui/scripts/windows/lootwnd.lua@0): UI.LootWnd:OnScanResult()[ERROR]: invalid type of the 13-th parameter ("playerGold"); u64 expected, got "boolean"
+12:32:57.692         | client: player 3 leave game
+12:32:58.829         | Loot: Tungsten_plate: 1
+12:33:00.225         | Loot: Silver_Junk_T3_4: 1
+12:33:01.475         | Loot: Silver_Junk_T3_3: 1
+12:33:03.925         | client: player 0 leave game
+12:33:04.658         | Loot: Silver_Junk_T3_101: 1
+12:33:05.325  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:UpdateServerData_OnUserProfileUpdate: atlas update
+12:33:08.676         | VoiceChat::ResetSounds: releasing raw sounds (2,2)...
+12:33:08.701         | VoiceChat::ResetSounds: ... done
+12:33:08.701         | client: avgPing 37.2/0.7; avgPacketLoss 0.0/0.0%; avgSnapshotLoss 0.1/0.4%, MTU 1492
+12:33:08.701         | client: connection closed. DR_CLIENT_GAME_FINISHED
+12:33:08.701         | Network stats (bytes per second): avg pushed 1219, max pushed 1647, avg sent 2233, max sent 2958, avg received 6739, max received 10456
+12:33:08.816         | ReplayManager: stopping activity due to map change
+12:33:08.827         | Peak entities: 849
+12:33:08.828         | Peak models: 449
+12:33:08.833         | Peak geometries: 1807. Cur geometries: 280
+12:33:08.986         | ====== starting level: 'levels/mainmenu/mm_federation'  ======
+12:33:09.030         | Remove autogen defs
+12:33:09.030         | Remove autogen defs
+12:33:09.034  WARNING| Could not load ship specularity texture levels/mainmenu/mm_federation\ship_specularity0.dds, used level specularity texture
+12:33:09.034  WARNING| Could not load ship irradiance texture levels/mainmenu/mm_federation\ship_irradiance0.dds, used level irradiance texture
+12:33:09.035         | Environment setting 'mm_federation' loaded
+12:33:09.876         | ====== level started:  'levels/mainmenu/mm_federation' success ======
+12:33:09.877         | Environment setting 'mm_federation' loaded
+12:33:09.877         | Successfuly saved userdata (ver:72568) to server
+12:33:09.893  WARNING| m_bufferizedUICalls delivery took 26.9 ms
+12:33:09.992  WARNING| frame 97802 gameGlobals.frameTimeReal is too large (0.108188)
+12:33:09.993         | Successfuly saved userdata (ver:72569) to server
+12:33:09.998  WARNING| frame 97803 gameGlobals.frameTimeReal is too large (0.164862)
+12:33:16.247  WARNING| m_bufferizedUICalls delivery took 7.2 ms
+12:33:20.063  WARNING| m_bufferizedUICalls delivery took 7.4 ms
+12:33:20.726         | {
+12:33:20.726         | 	"arcade": 1.000
+12:33:20.726         | 	"region": 0.000
+12:33:20.726         | }
+12:33:21.208         | MasterServerEndpoint: enter matchmaking queue
+12:33:21.209  WARNING| script (ui/scripts/public/uipublic.lua@0): ^5UI:MasterServer_OnEnterMMQueue
+12:33:21.221  WARNING| m_bufferizedUICalls delivery took 21.5 ms
+12:33:46.269  WARNING| m_bufferizedUICalls delivery took 16.7 ms
+12:34:16.247  WARNING| m_bufferizedUICalls delivery took 6.9 ms
+12:34:34.531  WARNING| m_bufferizedUICalls delivery took 9.5 ms
+12:34:46.248  WARNING| m_bufferizedUICalls delivery took 8.2 ms
+12:35:16.263  WARNING| m_bufferizedUICalls delivery took 5.3 ms
+12:35:46.248  WARNING| m_bufferizedUICalls delivery took 8.3 ms
+12:36:06.326         | MasterServerEndpoint: leave matchmaking queue ( but will join the game soon )
+12:36:06.332  WARNING| m_bufferizedUICalls delivery took 8.1 ms
+12:36:07.993         | nextRecheckOnDSFailure 1079.916, vid 25649042
+12:36:07.993         | nextRecheckOnDSFailure 1079.916, vid 29122661
+12:36:07.993         | nextRecheckOnDSFailure 1079.916, vid 31199954
+12:36:07.993         | nextRecheckOnDSFailure 1079.916, vid 31270713
+12:36:08.038         | Peak models: 300
+12:36:08.040  WARNING| m_bufferizedUICalls delivery took 78.8 ms
+12:36:08.376         | MasterServerSession: connect to dedicated server, session 46025506, at addr 23.111.211.203|35001
+12:36:08.401         | client: start connecting to 23.111.211.203|35001...
+12:36:08.427         | client: connected to 23.111.211.203|35001, MTU 1492. setting up session...
+12:36:08.460         | client. send version check message (40 bytes)
+12:36:08.576         | client. got onConnect init message. total 41046 bytes
+12:36:08.594         | Peak entities: 450
+12:36:08.596         | Peak geometries: 759. Cur geometries: 280
+12:36:08.705  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 341 in slot 1 not found
+12:36:08.705  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 371 in slot 2 not found
+12:36:08.705  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 409 in slot 3 not found
+12:36:08.705  WARNING| script (ui/scripts/windows/hangarwnd.lua@0): UI.HangarWnd:DestroyShipEntInSlot()[ERROR]: ship 434 in slot 4 not found
+12:36:08.705         | Remove autogen defs
+12:36:08.706         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 1 team 1
+12:36:08.706         | client: ADD_PLAYER 1 (fyringsved [], 3184347) status 6 team 2
+12:36:08.706         | client: server assigned id 0
+12:36:08.706         | client: got level load message 's1338_pandora_anomaly'
+12:36:08.710         | ReplayManager: stopping activity due to map change
+12:36:08.723         | Peak geometries: 0. Cur geometries: 280
+12:36:08.819         | ====== starting level: 'levels/area1/s1338_pandora_anomaly' BombTheBase client ======
+12:36:08.898         | Remove autogen defs
+12:36:09.044  WARNING| Async queue overflow
+12:36:09.113         | Resume async queue pushing
+12:36:09.129         | Environment setting 's1338_pandora_anomaly' loaded
+12:36:09.136  WARNING| Async queue overflow
+12:36:09.171         | Resume async queue pushing
+12:36:09.194         | client: send ready message
+12:36:09.255         | Remove autogen defs
+12:36:09.255         | Added def: Module_Autogen_1322867254, idx: 21543, total: 1
+12:36:09.255         | Added spell def: Spell_AG_HealBonusOnKill_Autogen_6569
+12:36:09.255         | Added spell def: Spell_AG_GravityBomb_Start_Autogen_6570
+12:36:09.255         | Added def: Module_Autogen_1387004271, idx: 21544, total: 2
+12:36:09.255         | Added spell def: Spell_AG_ShieldExplosion_Autogen_6571
+12:36:09.255         | Added spell def: Spell_AG_HealBonusOnKill_Autogen_6572
+12:36:09.255         | Added def: Module_Autogen_751529760, idx: 21545, total: 3
+12:36:09.255         | Added spell def: Spell_AG_SpawnBonus_Heal_Autogen_6573
+12:36:09.255         | Added spell def: Spell_AG_Impulse_Autogen_6574
+12:36:09.255         | Added def: Module_Autogen_788227204, idx: 21546, total: 4
+12:36:09.255         | Added spell def: Spell_AG_SecondShield_Autogen_6575
+12:36:09.255         | Added def: Module_Autogen_1401862402, idx: 21547, total: 5
+12:36:09.255         | Added spell def: Spell_AG_Blastwave_Thermal_Autogen_6576
+12:36:09.255         | Added spell def: Spell_AG_DamageBonusOnKill_Autogen_6577
+12:36:09.255         | Added def: Module_Autogen_1563643480, idx: 21548, total: 6
+12:36:09.255         | Added spell def: Spell_AG_ResistHullDec_Autogen_6578
+12:36:09.310         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 2 team 1
+12:36:09.310         | client: ADD_PLAYER 1 (fyringsved [UFO], 3184347) status 6 team 2
+12:36:09.314         | client: ADD_PLAYER 0 (ZiroTwo [xIDx], 2516405) status 4 team 1
+12:36:09.317         | client: got init message (and 1st snapshot). ping 2
+12:36:09.317         | VoiceChat::InitSounds: creating raw sounds ...
+12:36:09.318         | VoiceChat::InitSounds: ... done (3,3).
+12:36:10.025         | ====== level started:  'levels/area1/s1338_pandora_anomaly' success ======
+12:36:13.244         | client: ADD_PLAYER 63 (YusufAyyub, 0) status 4 team 2
+12:36:13.249         | client: ADD_PLAYER 62 (KoMaToz, 0) status 4 team 1
+12:36:13.255         | client: ADD_PLAYER 61 (KAVABANGA54644, 0) status 4 team 2
+12:36:13.261         | client: ADD_PLAYER 60 (ZlobuS71, 0) status 4 team 1
+12:36:13.267         | client: ADD_PLAYER 59 (Beinroda, 0) status 4 team 2
+12:36:13.274         | client: ADD_PLAYER 58 (nindza81, 0) status 4 team 1
+12:36:13.280         | client: ADD_PLAYER 57 (An0nym0use, 0) status 4 team 2
+12:36:13.287         | client: ADD_PLAYER 56 (Ganibal28624, 0) status 4 team 1
+12:36:13.292         | client: ADD_PLAYER 55 (Kemp, 0) status 4 team 2
+12:36:13.297         | client: ADD_PLAYER 54 (defull, 0) status 4 team 1
+12:36:16.265  WARNING| m_bufferizedUICalls delivery took 8.2 ms
+12:36:18.594         | client: ADD_PLAYER 1 (fyringsved [UFO], 3184347) status 4 team 2
+12:36:21.365  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:36:21.395         | Environment setting 's1338_pandora_anomaly' loaded
+12:36:22.849  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:36:46.264  WARNING| m_bufferizedUICalls delivery took 5.4 ms
+12:36:51.579  WARNING| Client: received Entity sync notification #1 for entity with netId 386, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:36:52.362  WARNING| Client: received Entity sync notification #1 for entity with netId 417, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:36:53.145  WARNING| Client: received Entity sync notification #1 for entity with netId 453, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:36:53.928  WARNING| Client: received Entity sync notification #1 for entity with netId 474, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:36:54.712  WARNING| Client: received Entity sync notification #1 for entity with netId 499, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:36:59.713  WARNING| Client: received Entity sync notification #1 for entity with netId 666, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:00.662  WARNING| Client: received Entity sync notification #1 for entity with netId 714, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:01.462  WARNING| Client: received Entity sync notification #1 for entity with netId 759, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:02.245  WARNING| Client: received Entity sync notification #1 for entity with netId 810, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:03.045  WARNING| Client: received Entity sync notification #1 for entity with netId 857, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:03.812  WARNING| Client: received Entity sync notification #1 for entity with netId 905, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:05.346  WARNING| Client: received Entity sync notification #1 for entity with netId 987, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:06.396  WARNING| Client: received Entity sync notification #8 for entity with netId 1057, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:37:06.396  WARNING| Client: received Entity sync notification #0 for entity with netId 1057, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:37:09.780  WARNING| Client: received Entity sync notification #1 for entity with netId 1149, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:12.796  WARNING| Client: received Entity sync notification #1 for entity with netId 1250, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:13.596  WARNING| Client: received Entity sync notification #1 for entity with netId 1292, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:16.063  WARNING| Client: received Entity sync notification #0 for entity with netId 1367, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:37:16.250  WARNING| m_bufferizedUICalls delivery took 5.9 ms
+12:37:16.563  WARNING| Client: received Entity sync notification #1 for entity with netId 1372, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:17.346  WARNING| Client: received Entity sync notification #1 for entity with netId 1396, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:18.147  WARNING| Client: received Entity sync notification #1 for entity with netId 1420, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:21.112  WARNING| Client: received Entity sync notification #1 for entity with netId 1479, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:21.912  WARNING| Client: received Entity sync notification #1 for entity with netId 1518, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:22.695  WARNING| Client: received Entity sync notification #1 for entity with netId 1558, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:23.463  WARNING| Client: received Entity sync notification #1 for entity with netId 1596, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:24.263  WARNING| Client: received Entity sync notification #1 for entity with netId 1630, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:25.279  WARNING| Client: received Entity sync notification #1 for entity with netId 1646, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:28.262  WARNING| Client: received Entity sync notification #1 for entity with netId 1745, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:29.113  WARNING| Client: received Entity sync notification #1 for entity with netId 1778, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:29.812  WARNING| Client: received Entity sync notification #1 for entity with netId 1789, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:30.579  WARNING| Client: received Entity sync notification #1 for entity with netId 1801, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:31.379  WARNING| Client: received Entity sync notification #1 for entity with netId 1825, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:32.163  WARNING| Client: received Entity sync notification #1 for entity with netId 1864, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:35.145  WARNING| Client: received Entity sync notification #1 for entity with netId 1980, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:37:46.267  WARNING| m_bufferizedUICalls delivery took 8.5 ms
+12:38:16.267  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:38:17.997  WARNING| Client: received Entity sync notification #1 for entity with netId 2415, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:38:21.030  WARNING| Client: received Entity sync notification #1 for entity with netId 2566, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:38:22.045  WARNING| Client: received Entity sync notification #1 for entity with netId 2617, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:38:46.273  WARNING| m_bufferizedUICalls delivery took 15.6 ms
+12:39:16.270  WARNING| m_bufferizedUICalls delivery took 11.1 ms
+12:39:46.268  WARNING| m_bufferizedUICalls delivery took 8.0 ms
+12:39:56.552  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:39:56.587         | Environment setting 's1338_pandora_anomaly' loaded
+12:39:58.037  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:40:16.294  WARNING| m_bufferizedUICalls delivery took 21.3 ms
+12:40:28.870  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:40:46.292  WARNING| m_bufferizedUICalls delivery took 17.7 ms
+12:41:02.571  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:41:16.292  WARNING| m_bufferizedUICalls delivery took 18.7 ms
+12:41:26.836  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:41:26.872         | Environment setting 's1338_pandora_anomaly' loaded
+12:41:28.319  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:FillQuestDescWithParams()[ERROR]: invalid type of the 4-th parameter ("bAllowLinks"); "boolean" expected, got "nil"
+12:41:46.286  WARNING| m_bufferizedUICalls delivery took 8.3 ms
+12:42:16.273  WARNING| m_bufferizedUICalls delivery took 9.7 ms
+12:42:22.049  WARNING| Client: received Entity sync notification #0 for entity with netId 6581, but entity doesn't exist(def 'Projectile_PlasmaBlade')
+12:42:24.714  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:42:46.286  WARNING| m_bufferizedUICalls delivery took 9.3 ms
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.864  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:42:46.865  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:43:14.932  WARNING| Client: received Entity sync notification #1 for entity with netId 7412, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:43:15.715  WARNING| Client: received Entity sync notification #1 for entity with netId 7429, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:43:16.305  WARNING| m_bufferizedUICalls delivery took 11.3 ms
+12:43:16.515  WARNING| Client: received Entity sync notification #1 for entity with netId 7437, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:43:17.018  WARNING| script (ui/scripts/windows/hudincomingstates.lua@0): UI.HudIncomingStates:TryAddAuraRecord()[ERROR]: invalid type of the "isBuff" for spell Debuff_CrystalRageMode_T4_Epic auraIdx 0; "boolean" expected, got "nil"
+12:43:17.298  WARNING| Client: received Entity sync notification #1 for entity with netId 7456, but entity doesn't exist(def 'Projectile_MacheteSmartRL2')
+12:43:22.769         | ReplayManager: replay (3.47Mb) is avaibalbe for downloading!
+12:43:24.381         | nextRecheckOnDSFailure 644.507, vid 25649042
+12:43:24.381         | nextRecheckOnDSFailure 644.507, vid 29122661
+12:43:24.381         | nextRecheckOnDSFailure 644.507, vid 31199954
+12:43:24.381         | nextRecheckOnDSFailure 644.507, vid 31270713
+12:43:24.444  WARNING| m_bufferizedUICalls delivery took 105.9 ms
+12:43:24.669  WARNING| m_bufferizedUICalls delivery took 106.9 ms
+12:43:25.046  WARNING| m_bufferizedUICalls delivery took 105.7 ms
+12:43:25.137  WARNING| m_bufferizedUICalls delivery took 8.9 ms
+12:43:32.631         | Loot: Silver_Junk_T4_4: 1
+12:43:33.981         | Loot: Silver_Junk_T4_4: 1
+12:43:35.514         | Loot: Silver_Junk_T4_4: 1
+12:43:36.564         | Loot: Silver_Junk_T4_4: 1
+12:43:37.797         | Loot: Silver_Junk_T4_4: 1
+12:43:39.148         | Loot: Silver_Junk_T3_12: 1
+12:43:40.614         | Loot: Silver_Junk_T3_11: 1
+12:43:44.700         | VoiceChat::ResetSounds: releasing raw sounds (3,3)...
+12:43:44.751         | VoiceChat::ResetSounds: ... done
+12:43:44.751         | client: avgPing 2.1/2.4; avgPacketLoss 0.0/0.0%; avgSnapshotLoss 0.0/0.0%, MTU 1492
+12:43:44.751         | client: connection closed. DR_CLIENT_GAME_FINISHED
+12:43:44.751         | Network stats (bytes per second): avg pushed 1040, max pushed 1608, avg sent 1977, max sent 3002, avg received 5326, max received 11090
+12:43:44.826         | ReplayManager: stopping activity due to map change
+12:43:44.841         | Peak entities: 858
+12:43:44.842         | Peak models: 410
+12:43:44.847         | Peak geometries: 1875. Cur geometries: 280
+12:43:44.981         | ====== starting level: 'levels/mainmenu/mm_federation'  ======
+12:43:45.025         | Remove autogen defs
+12:43:45.025         | Remove autogen defs
+12:43:45.028  WARNING| Could not load ship specularity texture levels/mainmenu/mm_federation\ship_specularity0.dds, used level specularity texture
+12:43:45.029  WARNING| Could not load ship irradiance texture levels/mainmenu/mm_federation\ship_irradiance0.dds, used level irradiance texture
+12:43:45.029         | Environment setting 'mm_federation' loaded
+12:43:45.892         | ====== level started:  'levels/mainmenu/mm_federation' success ======
+12:43:45.892         | Environment setting 'mm_federation' loaded
+12:43:45.892         | Successfuly saved userdata (ver:72570) to server
+12:43:45.908  WARNING| m_bufferizedUICalls delivery took 26.1 ms
+12:43:45.922  WARNING| frame 135420 gameGlobals.frameTimeReal is too large (0.129035)
+12:43:46.001         | Successfuly saved userdata (ver:72571) to server
+12:43:46.456  WARNING| m_bufferizedUICalls delivery took 7.7 ms
+12:45:16.933  WARNING| MasterServer: Timeout on request 'AC_ZONES_LUA_ACTIVE_EVENTS_UPDATE(487)'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[20]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[4]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[5]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:16.934  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:GetZoneEventVisualMap()[ERROR]: invalid type of _G.Events[15]; 'table' expected, got 'nil'
+12:45:24.832  WARNING| MasterServer: Timeout on request 'AC_WARMAP_GET(488)'
+12:45:26.549         | {
+12:45:26.549         | 	"arcade": 1.000
+12:45:26.550         | 	"region": 0.000
+12:45:26.550         | }
+12:45:32.967         | disconnected from masterServer with reason 41
+12:45:32.967         | Closed connection with masterServer addr 23.111.211.207:3802, reason 41
+12:45:32.968         | Remove autogen defs
+12:45:32.973         | MasterServer_RequestServerStatus
+12:45:32.973         | MasterServer_RequestServerVersion
+12:45:32.973         | MasterServer_RequestNewsFeed
+12:45:32.973         | MasterServer_RequestServerAddresess
+12:45:33.093  WARNING| frame 137309 gameGlobals.frameTimeReal is too large (0.123708)
+12:45:33.121         | MasterServer_OnServerStatus: status code 0, server status 1
+12:45:33.121         | MasterServer_OnServerVersion: status code 0, version 1.9.2a.146826
+, my version is 1.9.2a.146826
+12:45:33.122         | MasterServer_OnServerAddresess: status code 0
+12:45:33.298         | MasterServer_OnNewsFeed: status code 0
+12:45:33.996         | MasterServerEndpoint: connecting to load balancer at 23.111.211.205:3801 [0]...
+12:45:33.000         | MasterServerEndpoint: connected to load balancer 23.111.211.205:3801, awaiting shard address...
+12:45:34.011         | Applying LB cvars...
+12:45:34.011         | 'mss_playerBoughtVesselAdCooldown' <- '20.000'
+12:45:34.011         | 'clan_shipBuildHighRanks' <- '3.000'
+12:45:34.011         | 'sv_dailyWinPvpExpRewardCf' <- '2.000'
+12:45:34.011         | 'sv_dailyWinCoopExpRewardCf' <- '2.000'
+12:45:34.011         | 'event_halloween' <- '0.000'
+12:45:34.011         | 'event_claws' <- '0.000'
+12:45:34.011         | 'sv_dailyWinPveExpRewardCf' <- '2.000'
+12:45:34.011         | 'clan_shipUpgradeCanBuild' <- '3.000'
+12:45:34.011         | 'clan_shipPartsCanBuild' <- '4.000'
+12:45:34.011         | 'mss_playerBoughtVesselAdLoBrace' <- '-4.000'
+12:45:34.011         | 'sv_dailyWinBrawlExpRewardCf' <- '2.000'
+12:45:34.011         | 'cl_showBiomorphsKilledCounter' <- '0.000'
+12:45:34.011         | 'mss_playerBoughtVesselAdHiBrace' <- '4.000'
+12:45:34.011         | OnMessageClient(): received shard address: (23.111.211.208:3802)
+12:45:34.011         | OnMessageClient(): received shard address: (23.111.211.205:3802)
+12:45:34.011         | OnMessageClient(): received shard address: (23.111.211.207:3802)
+12:45:34.011         | OnMessageClient(): received chat server address (23.111.211.207:3815)
+12:45:34.011         | ConnectNextShard(): 3 - try establish connect with shard: 23.111.211.208:3802
+12:45:34.011         | disconnected from masterServer with reason 0
+12:45:34.011         | Disconnecting from load balancer
+12:45:34.022         | MasterServerEndpoint: connected to shard 23.111.211.208:3802, awaiting auth request...
+12:45:34.997         | NetChannel: remote sent disconnect reason 47, closing '23.111.211.208:3802'
+12:45:34.997         | disconnected from masterServer with reason 47
+12:45:34.997         | Closed connection with masterServer addr 23.111.211.208:3802, reason 47
+12:45:34.997  WARNING| script (ui/scripts/work/uigamefuncs.lua@0): UI:ShipPreset_WriteToFile()[ERROR]: invalid uid
+12:45:37.756         | Peak entities: 332
+12:45:37.756         | Remove autogen defs
+12:45:37.766         | Peak models: 300
+12:45:38.038         | Peak geometries: 759. Cur geometries: 0

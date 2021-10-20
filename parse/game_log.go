@@ -133,7 +133,7 @@ func (it *GameLogIter) processLogLine(lvl *GameLogLevel, line string) error {
 		return nil
 	}
 
-	status, team, group, err := it.parseAddPlayerFields(strings.Fields(addPlayer[playerEnd+1:]))
+	status, team, group, err := it.parsePlayerFields(strings.Fields(addPlayer[playerEnd+1:]))
 	if err != nil {
 		return err
 	}
@@ -195,7 +195,7 @@ func parsePlayer(player string) (*Player, error) {
 	}, nil
 }
 
-func (it *GameLogIter) parseAddPlayerFields(fields []string) (status, team, group int, err error) {
+func (it *GameLogIter) parsePlayerFields(fields []string) (status, team, group int, err error) {
 	// status 4 team 2 group 4778580
 	const (
 		addPLayerPrefix    = `ADD_PLAYER`
