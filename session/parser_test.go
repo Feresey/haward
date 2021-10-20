@@ -24,8 +24,7 @@ func TestParse(t *testing.T) {
 
 	rules := Rules{
 		awards: map[string]int{
-			"lafan4ik":       1,
-			"Viktorius31rus": 20,
+			"lafan4ik": 1,
 		},
 		punishments: map[string]int{
 			"fyringsved": -100,
@@ -33,6 +32,7 @@ func TestParse(t *testing.T) {
 		clanTags: map[string]int{
 			"HPrim": 5,
 		},
+		resolver: NewPlayerResolver(),
 	}
 
 	p := NewParser("ZiroTwo", combat, game, rules)
