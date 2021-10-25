@@ -28,6 +28,10 @@ type flags struct {
 func main() {
 	var f flags
 
+	// TODO корпорацию того же чела не считать
+	// TODO парсить правила
+	// TODO раскидать нормально этот файл
+
 	flag.StringVar(&f.logsDir, "dir", ".local/share/starconflict/logs", "Path to logs directory")
 	flag.StringVar(&f.outputFile, "o", "out.csv", "Path to the output file")
 	flag.StringVar(&f.rulesFile, "rules", "rules.txt", "Path to the rules file")
