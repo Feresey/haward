@@ -32,7 +32,7 @@ func TestParse(t *testing.T) {
 		clanTags: map[string]int{
 			"HPrim": 5,
 		},
-		resolver: NewPlayerResolver(),
+		resolver: NewPlayerResolver(nil),
 	}
 
 	p := NewParser("ZiroTwo", combat, game, rules)

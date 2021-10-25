@@ -25,7 +25,9 @@ type Rules struct {
 }
 
 func NewRules(path string) (*Rules, error) {
-	resolver := NewPlayerResolver()
+	resolver := NewPlayerResolver(map[string]string{
+		"Inspiration": "Nekopara",
+	})
 
 	// TODO
 	return &Rules{

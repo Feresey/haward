@@ -16,9 +16,12 @@ type PlayerClanResolver struct {
 	cli *http.Client
 }
 
-func NewPlayerResolver() *PlayerClanResolver {
+func NewPlayerResolver(initialList map[string]string) *PlayerClanResolver {
+	if initialList == nil {
+		initialList = make(map[string]string)
+	}
 	return &PlayerClanResolver{
-		cache: make(map[string]string),
+		cache: initialList,
 		rl:    ratelimit.New(30), // 0.3 second
 		cli:   http.DefaultClient,
 	}

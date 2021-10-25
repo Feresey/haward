@@ -31,6 +31,7 @@ func main() {
 	// TODO корпорацию того же чела не считать
 	// TODO парсить правила
 	// TODO раскидать нормально этот файл
+	// TODO переименованные жопа c кланом
 
 	flag.StringVar(&f.logsDir, "dir", ".local/share/starconflict/logs", "Path to logs directory")
 	flag.StringVar(&f.outputFile, "o", "out.csv", "Path to the output file")
