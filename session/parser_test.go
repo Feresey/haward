@@ -1,13 +1,13 @@
 package session
 
 import (
+	"context"
 	"errors"
 	"fmt"
 	"io"
 	"os"
 	"testing"
 
-	"github.com/Feresey/haward/parse"
 	"github.com/stretchr/testify/require"
 )
 
@@ -22,7 +22,7 @@ func TestParse(t *testing.T) {
 	r.NoError(err)
 	defer game.Close()
 
-	rules := Rules{
+	rules := &Rules{
 		awards: map[string]int{
 			"lafan4ik": 1,
 		},
@@ -36,18 +36,19 @@ func TestParse(t *testing.T) {
 	}
 
 	p := NewParser("ZiroTwo", combat, game, rules)
+	ctx := context.TODO()
 
-	res := make(chan []parse.DeathRecord)
+	res := make(chan *LevelReport)
 	go func() {
 		defer close(res)
-		err := p.Parse(res)
+		err := p.Parse(ctx, res)
 		if !errors.Is(err, io.EOF) {
 			r.NoError(err)
 		}
 	}()
 
 	for battle := range res {
-		for _, one := range battle {
+		for _, one := range battle.Score {
 			fmt.Printf("%s: %d\n", one.Killed, one.Award)
 		}
 	}

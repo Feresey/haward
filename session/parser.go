@@ -2,6 +2,7 @@ package session
 
 import (
 	"bufio"
+	"context"
 	"errors"
 	"fmt"
 	"io"
@@ -21,6 +22,29 @@ type Rules struct {
 	clanNames map[string]int
 
 	resolver *PlayerClanResolver
+}
+
+func NewRules(path string) (*Rules, error) {
+	resolver := NewPlayerResolver()
+
+	// TODO
+	return &Rules{
+		awards: map[string]int{
+			"Inspiration":    12,
+			"NikSvir":        12,
+			"NorthMetalhead": 42,
+		},
+		punishments: map[string]int{
+			"Mzelskii": -100500,
+		},
+		clanTags: map[string]int{
+			"4CB": 10,
+		},
+		clanNames: map[string]int{
+			"Nekopara": 10,
+		},
+		resolver: resolver,
+	}, nil
 }
 
 func (r *Rules) GetAward(player parse.Player) (award int, ok bool) {
@@ -54,33 +78,10 @@ func (r *Rules) GetAward(player parse.Player) (award int, ok bool) {
 	return 0, false
 }
 
-type PlayerClanResolver struct {
-	// map[player_name]clan_name
-	cache map[string]string
-}
-
-func NewPlayerResolver() *PlayerClanResolver {
-	return &PlayerClanResolver{
-		cache: make(map[string]string),
-	}
-}
-
-func (p *PlayerClanResolver) GetPlayerClanName(nickname string) (string, error) {
-	cached, ok := p.cache[nickname]
-	if ok {
-		return cached, nil
-	}
-
-	// TODO curl http://gmt.star-conflict.com/pubapi/v1/userinfo.php\?nickname\=AlaStoR
-	p.cache[nickname] = ""
-
-	return "", nil
-}
-
 // Parser это сущность которая обрабатывает логи одной сессии
 type Parser struct {
 	yourNickname string
-	rules        Rules
+	rules        *Rules
 
 	levelIter      *parse.GameLogIter
 	gameLogScanner *bufio.Scanner
@@ -91,7 +92,7 @@ type Parser struct {
 func NewParser(
 	yourNickname string,
 	combat, game io.Reader,
-	rules Rules,
+	rules *Rules,
 ) *Parser {
 	return &Parser{
 		yourNickname:   yourNickname,
@@ -102,20 +103,35 @@ func NewParser(
 	}
 }
 
-func (p *Parser) Parse(results chan<- []parse.DeathRecord) error {
+func (p *Parser) Parse(ctx context.Context, levelReports chan<- *LevelReport) error {
 	for !p.lastLevel {
-		scores, err := p.ParseLogLevel()
+		levelReport, err := p.parseLogLevel()
 		if err != nil {
 			return err
 		}
 
-		results <- scores
+		select {
+		case levelReports <- levelReport:
+		case <-ctx.Done():
+			return ctx.Err()
+		}
 	}
 	return nil
 }
 
-// ParseLogLevel парсит один уровень (одну игру по идее)
-func (p *Parser) ParseLogLevel() ([]parse.DeathRecord, error) {
+type Player struct {
+	parse.Player
+	// Clan is the name of the clan or its tag
+	Clan string
+}
+
+type LevelReport struct {
+	Enemies map[string]Player
+	Score   []parse.DeathRecord
+}
+
+// parseLogLevel парсит один уровень (одну игру по идее)
+func (p *Parser) parseLogLevel() (levelReport *LevelReport, err error) {
 	lvl, err := p.levelIter.ScanNextLevel()
 	if err != nil {
 		if errors.Is(err, io.EOF) {
@@ -124,7 +140,11 @@ func (p *Parser) ParseLogLevel() ([]parse.DeathRecord, error) {
 		return nil, fmt.Errorf("parse log level: %w", err)
 	}
 
-	enemies, err := p.getEnemiesAwards(lvl)
+	var report LevelReport
+
+	enemies := lvl.GetEnemies()
+
+	enemiesAwards, err := p.getEnemiesAwards(enemies)
 	if err != nil {
 		return nil, fmt.Errorf("get awards: %w", err)
 	}
@@ -132,21 +152,28 @@ func (p *Parser) ParseLogLevel() ([]parse.DeathRecord, error) {
 	awadrs, punishments, err := parse.ParseCombatLog(
 		p.gameLogScanner, p.yourNickname, lvl.LevelEnd,
 		func(s string) (int, bool) {
-			cost, ok := enemies[s]
+			cost, ok := enemiesAwards[s]
 			return cost, ok
 		})
 	if err != nil {
 		return nil, fmt.Errorf("parse combat log: %w", err)
 	}
 
-	scores := append(awadrs, punishments...)
+	report.Score = append(awadrs, punishments...)
 
-	return scores, nil
+	enemiesExtended, err := p.getEnemiesExtended(enemies)
+	if err != nil {
+		return nil, fmt.Errorf("get enemies extended: %w", err)
+	}
+
+	report.Enemies = enemiesExtended
+
+	return &report, nil
 }
 
-func (p *Parser) getEnemiesAwards(lvl *parse.GameLogLevel) (map[string]int, error) {
+func (p *Parser) getEnemiesAwards(enemies map[string]parse.Player) (map[string]int, error) {
 	awards := make(map[string]int)
-	for _, enemy := range lvl.GetEnemies() {
+	for _, enemy := range enemies {
 		award, ok := p.rules.GetAward(enemy)
 		if ok {
 			awards[enemy.Name] = award
@@ -154,4 +181,29 @@ func (p *Parser) getEnemiesAwards(lvl *parse.GameLogLevel) (map[string]int, erro
 		}
 	}
 	return awards, nil
+}
+
+func (p *Parser) getEnemiesExtended(enemies map[string]parse.Player) (map[string]Player, error) {
+	res := make(map[string]Player)
+	for nickname, enemy := range enemies {
+		if enemy.ClanTag != "" {
+			res[nickname] = Player{
+				Player: enemy,
+				Clan:   enemy.ClanTag,
+			}
+			continue
+		}
+		clanName, err := p.rules.resolver.GetPlayerClanName(nickname)
+		if err != nil {
+			return nil, err
+		}
+		if clanName != "" {
+			res[nickname] = Player{
+				Player: enemy,
+				Clan:   clanName,
+			}
+		}
+	}
+
+	return res, nil
 }
