@@ -13,6 +13,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/Feresey/haward/rules"
 	"github.com/Feresey/haward/session"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -49,7 +50,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	rules, err := session.NewRules(f.rulesFile)
+	rulesFile, err := os.Open(f.rulesFile)
+	if err != nil {
+		logger.Fatal("", zap.Error(err))
+	}
+	defer rulesFile.Close()
+
+	rules, err := rules.NewRules(rulesFile)
 	if err != nil {
 		logger.Fatal("parse rules", zap.Error(err))
 	}
@@ -73,7 +80,7 @@ type Parser struct {
 	f flags
 
 	logger *zap.Logger
-	rules  *session.Rules
+	rules  *rules.Rules
 }
 
 func (p *Parser) run(ctx context.Context) error {

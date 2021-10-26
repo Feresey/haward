@@ -8,82 +8,13 @@ import (
 	"io"
 
 	"github.com/Feresey/haward/parse"
+	"github.com/Feresey/haward/rules"
 )
-
-// Rules описывает правила ивента - награды за головы и штрафы.
-type Rules struct {
-	// награды за конкретных пилотов
-	awards map[string]int
-	// повелители бури
-	punishments map[string]int
-	// теги кланов, за которыми охота
-	clanTags map[string]int
-	// полные названия кланов, за которыми охота
-	clanNames map[string]int
-
-	resolver *PlayerClanResolver
-}
-
-func NewRules(path string) (*Rules, error) {
-	resolver := NewPlayerResolver(map[string]string{
-		"Inspiration": "Nekopara",
-	})
-
-	// TODO
-	return &Rules{
-		awards: map[string]int{
-			"Inspiration":    12,
-			"NikSvir":        12,
-			"NorthMetalhead": 42,
-		},
-		punishments: map[string]int{
-			"Mzelskii": -100500,
-		},
-		clanTags: map[string]int{
-			"4CB": 10,
-		},
-		clanNames: map[string]int{
-			"Nekopara": 10,
-		},
-		resolver: resolver,
-	}, nil
-}
-
-func (r *Rules) GetAward(player parse.Player) (award int, ok bool) {
-	award, ok = r.awards[player.Name]
-	if ok {
-		return
-	}
-	award, ok = r.punishments[player.Name]
-	if ok {
-		// повелителей бури можно сбивать если они в группе
-		if player.InGroup {
-			return 0, false
-		}
-		return
-	}
-	award, ok = r.clanTags[player.ClanTag]
-	if ok {
-		return
-	}
-
-	if player.ClanTag == "" {
-		fullClanName, err := r.resolver.GetPlayerClanName(player.Name)
-		if err != nil {
-			return 0, false
-		}
-		award, ok = r.clanNames[fullClanName]
-		if ok {
-			return
-		}
-	}
-	return 0, false
-}
 
 // Parser это сущность которая обрабатывает логи одной сессии
 type Parser struct {
 	yourNickname string
-	rules        *Rules
+	rules        *rules.Rules
 
 	levelIter      *parse.GameLogIter
 	gameLogScanner *bufio.Scanner
@@ -94,7 +25,7 @@ type Parser struct {
 func NewParser(
 	yourNickname string,
 	combat, game io.Reader,
-	rules *Rules,
+	rules *rules.Rules,
 ) *Parser {
 	return &Parser{
 		yourNickname:   yourNickname,
@@ -195,14 +126,14 @@ func (p *Parser) getEnemiesExtended(enemies map[string]parse.Player) (map[string
 			}
 			continue
 		}
-		clanName, err := p.rules.resolver.GetPlayerClanName(nickname)
+		clan, err := p.rules.GetPlayerClan(nickname)
 		if err != nil {
 			return nil, err
 		}
-		if clanName != "" {
+		if clan != nil {
 			res[nickname] = Player{
 				Player: enemy,
-				Clan:   clanName,
+				Clan:   clan.Name,
 			}
 		}
 	}

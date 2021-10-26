@@ -1,4 +1,4 @@
-package session
+package rules
 
 import (
 	"encoding/json"
@@ -8,42 +8,41 @@ import (
 	"go.uber.org/ratelimit"
 )
 
+type Clan struct {
+	Name, Tag string
+}
+
 type PlayerClanResolver struct {
-	// map[player_name]clan_name
-	cache map[string]string
+	// map[player_name]clan
+	cache map[string]Clan
 
 	rl  ratelimit.Limiter
 	cli *http.Client
 }
 
-func NewPlayerResolver(initialList map[string]string) *PlayerClanResolver {
-	if initialList == nil {
-		initialList = make(map[string]string)
-	}
+func NewPlayerResolver() *PlayerClanResolver {
 	return &PlayerClanResolver{
-		cache: initialList,
+		cache: make(map[string]Clan),
 		rl:    ratelimit.New(30), // 0.3 second
 		cli:   http.DefaultClient,
 	}
 }
 
-func (p *PlayerClanResolver) GetPlayerClanName(nickname string) (string, error) {
+func (p *PlayerClanResolver) GetPlayerClan(nickname string) (*Clan, error) {
 	cached, ok := p.cache[nickname]
 	if ok {
-		return cached, nil
+		return &cached, nil
 	}
-
-	name, err := p.getFromAPI(nickname)
+	clan, err := p.getFromAPI(nickname)
 	if err != nil {
-		return "", fmt.Errorf("get player clan from api: %s, %w", nickname, err)
+		return nil, fmt.Errorf("get player clan from api: %s, %w", nickname, err)
 	}
 
-	p.cache[nickname] = *name
-
-	return *name, nil
+	p.cache[nickname] = *clan
+	return clan, nil
 }
 
-func (p *PlayerClanResolver) getFromAPI(nickname string) (*string, error) {
+func (p *PlayerClanResolver) getFromAPI(nickname string) (*Clan, error) {
 	req, err := http.NewRequest(
 		http.MethodGet,
 		fmt.Sprintf("http://gmt.star-conflict.com/pubapi/v1/userinfo.php?nickname=%s", nickname),
@@ -75,5 +74,20 @@ func (p *PlayerClanResolver) getFromAPI(nickname string) (*string, error) {
 		return nil, fmt.Errorf("decode response: %w", err)
 	}
 
-	return &data.Data.Clan.Name, nil
+	return &Clan{Name: data.Data.Clan.Name, Tag: data.Data.Clan.Tag}, nil
+}
+
+func (p *PlayerClanResolver) AddOldNickname(oldNickname, newNickname string) error {
+	clanCached, ok := p.cache[newNickname]
+	if ok {
+		p.cache[oldNickname] = clanCached
+	}
+
+	clan, err := p.GetPlayerClan(newNickname)
+	if err != nil {
+		return err
+	}
+
+	p.cache[oldNickname] = *clan
+	return nil
 }

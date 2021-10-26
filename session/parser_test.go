@@ -6,8 +6,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 	"testing"
 
+	"github.com/Feresey/haward/rules"
 	"github.com/stretchr/testify/require"
 )
 
@@ -22,20 +24,20 @@ func TestParse(t *testing.T) {
 	r.NoError(err)
 	defer game.Close()
 
-	rules := &Rules{
-		awards: map[string]int{
-			"lafan4ik": 1,
-		},
-		punishments: map[string]int{
-			"fyringsved": -100,
-		},
-		clanTags: map[string]int{
-			"HPrim": 5,
-		},
-		resolver: NewPlayerResolver(nil),
-	}
+	const rulesTxt = `
+=== PLAYERS ===
++1
+lafan4ik
+-100
+fyringsved
+=== CORPORATIONS ===
++5 HPrim
+`
 
-	p := NewParser("ZiroTwo", combat, game, rules)
+	rule, err := rules.NewRules(strings.NewReader(rulesTxt))
+	r.NoError(err)
+
+	p := NewParser("ZiroTwo", combat, game, rule)
 	ctx := context.TODO()
 
 	res := make(chan *LevelReport)
