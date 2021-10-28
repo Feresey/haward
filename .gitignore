@@ -1,7 +1,7 @@
-logs
 .vscode
+/logs
+/logs.zip
 
-haward
-haward.exe
-haward_darwin
-logs.zip
+/haward
+/haward.exe
+/haward_darwin
