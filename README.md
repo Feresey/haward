@@ -3,6 +3,14 @@
 Фантазия у меня внезапно закончилась когда я начал делать эту утилиту,
 поэтому она называется head award.
 
+-----
+
+## ВАЖНА
+
+**Логи живут только 5 дней**, потом СК их автоматически чистит
+
+-----
+
 ## Описание
 
 Ну.
@@ -157,7 +165,20 @@ __кусочек фичи__: `Koven1Nordsiard, TechnerParsival1`
 
 Ну если вы до сих пор не посмотрели `--help` то я восхищаюсь тем что вы досюда дочитали.
 
+```text
+Usage of ./haward:
+  -dir string
+        Path to logs directory (default ".local/share/starconflict/logs")
+  -nick string
+        Your nickname (default "ZiroTwo")
+  -o string
+        Path to the output file (default "out.csv")
+  -rules string
+        Path to the rules file (default "rules.txt")
+```
 
+Как я и говорил в самом начале - прога без графики, прога консольная.
+Виндузятники могут либо испугаться, либо включить гугл и посмотреть как запускать программы через консоль.
 
 ## Косяки
 
