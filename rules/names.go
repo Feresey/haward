@@ -2,6 +2,7 @@ package rules
 
 import (
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"io"
 	"strconv"
@@ -36,6 +37,17 @@ func NewRules(rd io.Reader) (*Rules, error) {
 	}
 
 	return r, r.parseRules(rd)
+}
+
+func (r *Rules) MarshalJSON() ([]byte, error) {
+	return json.Marshal(struct {
+		Awards, Punishments, ClanTags, ClanNames map[string]int
+	}{
+		Awards:      r.awards,
+		Punishments: r.punishments,
+		ClanTags:    r.clanTags,
+		ClanNames:   r.clanNames,
+	})
 }
 
 func (r *Rules) GetAward(player parse.Player) (award int, ok bool) {

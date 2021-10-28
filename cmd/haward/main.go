@@ -10,6 +10,7 @@ import (
 	"os"
 	"os/signal"
 	"path/filepath"
+	"sort"
 	"syscall"
 	"time"
 
@@ -24,6 +25,7 @@ type flags struct {
 	outputFile   string
 	rulesFile    string
 	yourNickname string
+	debug        bool
 }
 
 func main() {
@@ -38,11 +40,14 @@ func main() {
 	flag.StringVar(&f.outputFile, "o", "out.csv", "Path to the output file")
 	flag.StringVar(&f.rulesFile, "rules", "rules.txt", "Path to the rules file")
 	flag.StringVar(&f.yourNickname, "nick", "ZiroTwo", "Your nickname")
+	flag.BoolVar(&f.debug, "debug", false, "show debug messages")
 	flag.Parse()
 
 	lc := zap.NewDevelopmentConfig()
 	lc.EncoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
-	lc.Level = zap.NewAtomicLevelAt(zapcore.InfoLevel)
+	if !f.debug {
+		lc.Level = zap.NewAtomicLevelAt(zapcore.InfoLevel)
+	}
 
 	logger, err := lc.Build()
 	if err != nil {
@@ -60,6 +65,8 @@ func main() {
 	if err != nil {
 		logger.Fatal("parse rules", zap.Error(err))
 	}
+
+	logger.Debug("", zap.Reflect("rules", rules))
 
 	p := &Parser{
 		f:      f,
@@ -154,7 +161,7 @@ func (p *Parser) parseSession(ctx context.Context, sessionName string) (*Session
 
 	p.logger.Debug("start session parser")
 	go func() {
-		err := parser.Parse(ctx, levelReports)
+		err := parser.Parse(ctx, p.logger, levelReports)
 		lvl := zapcore.WarnLevel
 		if errors.Is(err, io.EOF) {
 			err = nil
@@ -178,7 +185,7 @@ func (p *Parser) parseSession(ctx context.Context, sessionName string) (*Session
 		p.logger.Check(lvl, "got level report").Write(zap.Int("length", len(levelReport.Score)))
 	}
 
-	p.logger.Debug("wait for error")
+	p.logger.Debug("wait for error", zap.Reflect("level_report", s))
 	return &s, <-done
 }
 
@@ -195,6 +202,18 @@ func getSessionList(logsDir string) ([]string, error) {
 			res = append(res, session.Name())
 		}
 	}
+
+	sort.Slice(res, func(i, j int) bool {
+		getTime := func(s string) time.Time {
+			startedAt, _ := time.Parse(sessionTimeFormat, s)
+			return startedAt
+		}
+
+		iTime := getTime(res[i])
+		jTime := getTime(res[j])
+
+		return jTime.After(iTime)
+	})
 
 	return res, nil
 }

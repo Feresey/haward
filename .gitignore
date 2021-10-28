@@ -2,4 +2,6 @@ logs
 .vscode
 
 haward
+haward.exe
+haward_darwin
 logs.zip

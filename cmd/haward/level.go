@@ -20,7 +20,8 @@ type SessionIter struct {
 
 func NewReportIter(s *SessionReport) *SessionIter {
 	return &SessionIter{
-		s: s,
+		s:        s,
+		scoreIdx: -1,
 	}
 }
 

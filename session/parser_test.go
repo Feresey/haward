@@ -11,6 +11,7 @@ import (
 
 	"github.com/Feresey/haward/rules"
 	"github.com/stretchr/testify/require"
+	"go.uber.org/zap"
 )
 
 func TestParse(t *testing.T) {
@@ -43,7 +44,7 @@ fyringsved
 	res := make(chan *LevelReport)
 	go func() {
 		defer close(res)
-		err := p.Parse(ctx, res)
+		err := p.Parse(ctx, zap.NewNop(), res)
 		if !errors.Is(err, io.EOF) {
 			r.NoError(err)
 		}

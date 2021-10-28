@@ -9,6 +9,7 @@ import (
 
 	"github.com/Feresey/haward/parse"
 	"github.com/Feresey/haward/rules"
+	"go.uber.org/zap"
 )
 
 // Parser это сущность которая обрабатывает логи одной сессии
@@ -36,9 +37,9 @@ func NewParser(
 	}
 }
 
-func (p *Parser) Parse(ctx context.Context, levelReports chan<- *LevelReport) error {
+func (p *Parser) Parse(ctx context.Context, log *zap.Logger, levelReports chan<- *LevelReport) error {
 	for !p.lastLevel {
-		levelReport, err := p.parseLogLevel()
+		levelReport, err := p.parseLogLevel(log)
 		if err != nil {
 			return err
 		}
@@ -64,7 +65,7 @@ type LevelReport struct {
 }
 
 // parseLogLevel парсит один уровень (одну игру по идее)
-func (p *Parser) parseLogLevel() (levelReport *LevelReport, err error) {
+func (p *Parser) parseLogLevel(logger *zap.Logger) (levelReport *LevelReport, err error) {
 	lvl, err := p.levelIter.ScanNextLevel()
 	if err != nil {
 		if errors.Is(err, io.EOF) {
@@ -77,10 +78,13 @@ func (p *Parser) parseLogLevel() (levelReport *LevelReport, err error) {
 
 	enemies := lvl.GetEnemies()
 
+	logger.Debug("", zap.Reflect("enemies", enemies))
+
 	enemiesAwards, err := p.getEnemiesAwards(enemies)
 	if err != nil {
 		return nil, fmt.Errorf("get awards: %w", err)
 	}
+	logger.Debug("", zap.Reflect("enemies_awards", enemiesAwards))
 
 	awadrs, punishments, err := parse.ParseCombatLog(
 		p.gameLogScanner, p.yourNickname, lvl.LevelEnd,
