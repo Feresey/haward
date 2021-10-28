@@ -38,9 +38,9 @@
 
 И там же в комментариях написано в какой именно папке СК хранит логи.
 
-Для богомерзкой винды: 'Documents\My Games\StarConflict\logs'
-Для божественного линуха: '.local/share/starconflict/logs'
-Для обосранного мака: 'Libary/Application Support/Star Conflict/logs'
+- Для богомерзкой винды: 'Documents\My Games\StarConflict\logs'
+- Для божественного линуха: '.local/share/starconflict/logs'
+- Для обосранного мака: 'Libary/Application Support/Star Conflict/logs'
 
 ### А что в логах
 
