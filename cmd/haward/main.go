@@ -25,8 +25,11 @@ type flags struct {
 	outputFile   string
 	rulesFile    string
 	yourNickname string
+	logAfter     string
 	debug        bool
 }
+
+const logAferFormat = "_2 1 15:04:05"
 
 func main() {
 	var f flags
@@ -41,6 +44,7 @@ func main() {
 	flag.StringVar(&f.rulesFile, "rules", "rules.txt", "Path to the rules file")
 	flag.StringVar(&f.yourNickname, "nick", "ZiroTwo", "Your nickname")
 	flag.BoolVar(&f.debug, "debug", false, "show debug messages")
+	flag.StringVar(&f.logAfter, "after", "", "golang time stamp ("+logAferFormat+")")
 	flag.Parse()
 
 	lc := zap.NewDevelopmentConfig()
@@ -91,11 +95,11 @@ type Parser struct {
 }
 
 func (p *Parser) run(ctx context.Context) error {
-	sessions, err := getSessionList(p.f.logsDir)
+	sessions, err := p.getSessionList()
 	if err != nil {
 		return fmt.Errorf("scan sessions: %w", err)
 	}
-	p.logger.Debug("session list", zap.Strings("sessions", sessions))
+	p.logger.Debug("session list", zap.Times("sessions", sessions))
 
 	// TODO
 	output, err := os.Create(p.f.outputFile)
@@ -113,7 +117,7 @@ func (p *Parser) run(ctx context.Context) error {
 	p.logger.Info("write csv header")
 
 	for _, session := range sessions {
-		p.logger.Info("start process session", zap.String("session", session))
+		p.logger.Info("start process session", zap.Stringer("session", session))
 
 		sessionReport, err := p.parseSession(ctx, session)
 		if err != nil {
@@ -139,7 +143,8 @@ func (p *Parser) run(ctx context.Context) error {
 
 const sessionTimeFormat = "2006.01.02 15.04.05.999"
 
-func (p *Parser) parseSession(ctx context.Context, sessionName string) (*SessionReport, error) {
+func (p *Parser) parseSession(ctx context.Context, sessionStart time.Time) (*SessionReport, error) {
+	sessionName := sessionStart.Format(sessionTimeFormat)
 	startedAt, err := time.Parse(sessionTimeFormat, sessionName)
 	if err != nil {
 		return nil, fmt.Errorf("parse session date: %q: %w", sessionName, err)
@@ -189,30 +194,43 @@ func (p *Parser) parseSession(ctx context.Context, sessionName string) (*Session
 	return &s, <-done
 }
 
-func getSessionList(logsDir string) ([]string, error) {
-	sessions, err := os.ReadDir(logsDir)
+func (p *Parser) getSessionList() ([]time.Time, error) {
+	sessions, err := os.ReadDir(p.f.logsDir)
 	if err != nil {
 		return nil, err
 	}
 
-	var res []string
+	var logsAfter time.Time
+
+	if p.f.logAfter != "" {
+		logsAfter, err = time.Parse(logAferFormat, p.f.logAfter)
+		if err != nil {
+			return nil, fmt.Errorf("parse logAfter date: %w", err)
+		}
+		logsAfter = logsAfter.AddDate(time.Now().Year(), 0, 0)
+		p.logger.Debug("log after", zap.Time("time", logsAfter))
+	}
+
+	var res []time.Time
 
 	for _, session := range sessions {
-		if session.IsDir() {
-			res = append(res, session.Name())
+		if !session.IsDir() {
+			continue
 		}
+		sessionStart, err := time.Parse(sessionTimeFormat, session.Name())
+		if err != nil {
+			continue
+		}
+		p.logger.Debug("check log after", zap.Time("session", sessionStart), zap.Time("after", logsAfter))
+		if !logsAfter.IsZero() && sessionStart.Before(logsAfter) {
+			continue
+		}
+
+		res = append(res, sessionStart)
 	}
 
 	sort.Slice(res, func(i, j int) bool {
-		getTime := func(s string) time.Time {
-			startedAt, _ := time.Parse(sessionTimeFormat, s)
-			return startedAt
-		}
-
-		iTime := getTime(res[i])
-		jTime := getTime(res[j])
-
-		return jTime.After(iTime)
+		return res[j].After(res[i])
 	})
 
 	return res, nil
